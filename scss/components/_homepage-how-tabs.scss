@@ -1,0 +1,50 @@
+.how-tabs__wrap{
+  background-color: #edcd62;
+  @include transition-04;
+}
+
+.how-tab__item{
+  display: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  @include transition-04;
+  &.is-active{
+    display: block;
+  }
+}
+
+.how-tab__item-inner{
+  padding: 1.5 * $gap 0;
+}
+
+.how-tab__item-footer{
+  border-top: 1px solid #fff;
+  padding: 0.5 * $gap 0;
+  @include box-shadow-top;
+}
+
+.how-tab__item-row{
+  @include display-flex;
+  margin: 0 -9px;
+  position: relative;
+}
+
+.how-tab__item-col{
+  padding: 0 9px;
+  @include transition-03;
+}
+
+.how-tab__item-col--1{
+  width: 33.33%;
+  max-width: 33.33%;
+}
+
+.how-tab__item-col--2{
+  width: 66.66%;
+  max-width: 66.66%;
+}
+
+.how-tab__item-col--3{
+  width: 100%;
+  max-width: 100%;
+}

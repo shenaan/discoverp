@@ -1,0 +1,39 @@
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+
+.show-in-mob{
+  display: block !important;
+  @include respond-to(md){
+    display: none !important;
+  }
+}
+
+.hide-in-mob{
+  display: none !important;
+  @include respond-to(md){
+    display: block !important;
+  }
+}
+
+.is-blurred{
+  -webkit-filter: blur(10px) grayscale(1) contrast(0.85);
+  filter: blur(10px) grayscale(1) contrast(0.85);
+}
+
+.animated{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-transform: perspective(1px) translate3d(0, 0, 0);
+  transform: perspective(1px) translate3d(0, 0, 0);
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include hover-scale;
+  }
+}

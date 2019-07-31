@@ -1,0 +1,12 @@
+.hootah{
+  position: absolute;
+  &--sm{
+    width: 81px;
+  }
+  &--md{
+    width: 182px;
+  }
+  img{
+    width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+.tab-directions__map{
+  height: 440px;
+  width: 100%;
+  border-radius: $radius;
+  @include box-shadow;
+  overflow: hidden;
+}
+
+.tab-directions__info{
+  position: relative;
+  padding-bottom: $gap;
+  padding-top: 130px;
+}
+
+.tab-directions__info-inner{
+  position: relative;
+  padding: 27px 45px 2*$gap 27px;
+  background-color: #f5e3a7;
+  border-radius: $radius;
+  @include box-shadow;
+
+  h2{
+    margin-bottom: 22px;
+  }
+}
+
+.tab-directions__info-btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -($gap);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  @include center;
+}
+
+.tab-directions__info-content{
+  margin-bottom: 14px;
+  padding-left: 45px;
+  position: relative;
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+  .icon{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    font-size: 29px;
+    &-telephone{
+      font-size: 25px;
+    }
+  }
+}
+
+.tab-directions__hootah{
+  right: -27px;
+  top: -32px;
+}
+
+.tab-directions__bubble{
+  position: absolute;
+  right: 56px;
+  top: -120px;
+  width: 169px;
+  height: 144px;
+  p{
+    width: 87px;
+  }
+}

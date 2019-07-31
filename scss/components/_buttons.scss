@@ -1,0 +1,65 @@
+/*-------------Button-----------------*/
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include ai-flex-center();
+  @include jc-flex-center();
+  line-height: 1;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: $radius;
+  @include box-shadow();
+  @include transition-03();
+  position: relative;
+  outline: none !important;
+
+  &--animated { //prevent blurring on scale
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: perspective(1px) translate3d(0, 0, 0);
+    transform: perspective(1px) translate3d(0, 0, 0);
+  }
+
+  &--sm{
+    height: $gap;
+    padding-top: 2px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 0.8rem /// 16px
+  }
+
+  &--md{
+    height: 2 * $gap;
+    min-width: 315px;
+  }
+
+  &--lg{
+    height: 2 * $gap;
+    font-size: 0.9rem; /// 18px
+    min-width: 387px;
+    border-radius: $radius + 4;
+  }
+
+  &--white{
+    background-color: #fff;
+    color: $textColor;
+    border: 2px solid $textColor;
+  }
+
+  &--yellow{
+    background-color: $yellowColorTint;
+    border: 2px solid #fff;
+    color: $textColor;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include hover-scale;
+  }
+}
+

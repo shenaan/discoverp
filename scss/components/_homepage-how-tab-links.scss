@@ -1,0 +1,101 @@
+$yellowTabLink: #ebc850; /// darker yellow color for tab links
+
+.how-tab__links{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -166px;
+  z-index: 10;
+  &:after{
+    content: '';
+    display: block;
+    background-color: $yellowTabLink;
+    border-top: 1px solid #fff;
+    z-index: 1;
+    height: 22px;
+    width: 100%;
+  }
+}
+
+.how-tab__links-inner{
+  @include display-flex;
+  align-items: flex-end;
+  margin: 0 -9px;
+}
+
+.how-tab__link-item{
+  width: 33.33%;
+  max-width: 33.33%;
+  padding: 0 9px;
+  position: relative;
+
+  &.is-active{
+    &:before, &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      background-color: $yellowTabLink;
+      //height: 22px;
+      //width: 22px;
+      border-radius: 25px;
+      border-bottom: 25px solid $yellowTabLink;
+    }
+    &:before{
+      left: 0;
+    }
+    &:after{
+      right: 0;
+    }
+
+    .how-tab__link{
+      height: 144px;
+      background-color: $yellowTabLink;
+      border-bottom: 3px solid $yellowTabLink;
+      @include transition(none);
+      &:after{
+        content: '';
+        display: block;
+        background-color: $yellowTabLink;
+        z-index: 1;
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+      }
+      h3{
+        font-size: 2.25rem;
+        line-height: 2.1rem;
+        max-width: 210px;
+        @include center();
+      }
+      br{
+        display: block;
+      }
+    }
+  }
+}
+
+.how-tab__link{
+  @include display-flex;
+  @include ai-flex-center;
+  @include jc-flex-center;
+  background-color: #fdf9ed;
+  color: #333;
+  padding: 10px;
+  height: 99px;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border: 1px solid #fff;
+  position: relative;
+  h3{
+    line-height: 1.3rem;
+    text-align: center;
+  }
+  br{
+    display: none;
+  }
+}

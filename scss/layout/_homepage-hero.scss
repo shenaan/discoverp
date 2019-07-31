@@ -1,0 +1,53 @@
+.homepage__hero{
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include respond-to(md){
+    min-height: 800px;
+  }
+}
+
+.homepage-hero__bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+  }
+}
+
+.homepage-hero__content{
+  margin: auto;
+  max-width: 740px;
+  h1{
+    color: #fff;
+    font-size: 2.75rem; //55px;
+    line-height: 2.9rem; //58px;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  @include respond-to(md){
+    h1{
+      text-shadow: 1px 1px 4px $textColor;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.arrow{
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include ai-flex-center;
+  @include jc-flex-center;
+  border: 2px solid;
+  border-radius: 100%;
+  &--sm{
+    @include square(73px);
+    i{
+      font-size: 29px;
+    }
+  }
+  &--lg{
+    @include square(90px);
+
+  }
+  &--baseColor{
+    color: $textColor;
+    border-color: #fff;
+    background-color: $textColorTint;
+  }
+}

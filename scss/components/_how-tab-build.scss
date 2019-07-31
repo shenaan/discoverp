@@ -1,0 +1,50 @@
+.tab-build__col-default{
+  position: relative;
+  @include transform-origin(left);
+  &.was-animated{
+    @include translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    top: 1.5 * $gap;
+    @include transform-scale(0,1);
+  }
+  &.is-removed{
+    position: absolute;
+    width: 0;
+  }
+}
+
+.tab-build__content{
+  padding-bottom: 220px;
+  h2{
+    margin-bottom: calc(32px - 6px);  ///considering line height
+    max-width: 500px;
+  }
+  p{
+    max-width: 542px;
+  }
+}
+
+.tab-build__helper{
+  position: absolute;
+  bottom: -1.5 * $gap;
+  left: calc(33.33% + 90px);  /// half width img
+  width: 180px;
+  height: 160px;
+}
+
+.tab-build__hootah{
+  left: 0;
+  bottom: 0;
+}
+
+.tab-build__bubble{
+  width: 210px;
+  height: 180px;
+  left: 93%;
+  bottom: calc(100% - 59px);
+  p{
+    width: 85px;
+  }
+}

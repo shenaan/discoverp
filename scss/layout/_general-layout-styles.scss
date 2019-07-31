@@ -1,0 +1,42 @@
+body,
+html {
+  height: auto !important;
+  &.no-scroll {
+    overflow-y: hidden !important;
+    height: 100% !important;
+  }
+  &.no-scroll-initial{
+    overflow: hidden !important;
+    height: auto !important;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+
+  &.is-tinted{
+    &:after{
+      content: '';
+      display: block;
+      background-color: $blackColor;
+      z-index: 99;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include transition-03;
+    }
+  }
+}
+
+.is-mobile{
+  display: block;
+
+  @include respond-min(992){
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,32 @@
+.page-menu__search{
+  margin-top: auto;
+  width: 100%;
+  opacity: 0;
+}
+
+.menu-search__input-wrap{
+  position: relative;
+  max-width: 390px;
+  margin-left: auto;
+  input{
+    padding-right: 60px;
+  }
+}
+
+.menu-search__submit-btn{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 15px;
+  margin: auto;
+  display: block;
+  background-color: transparent;
+  border-radius: 0 !important;
+  outline: none !important;
+  border: none;
+  line-height: 1;
+  .icon{
+    font-size: 30px;
+    color: $textColor;
+  }
+}

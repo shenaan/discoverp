@@ -1,0 +1,26 @@
+.page-menu__exhibition{
+  position: relative;
+  opacity: 0;
+
+  .popup-exhibition__content{
+    @include rotate(0);
+    width: 302px;
+    left: auto;
+    margin-left: auto;
+    padding-bottom: 2 * $gap;
+  }
+  .popup-exhibition__content-inner{
+    margin-left: auto;
+    text-align: right;
+  }
+  .popup-exhibition__img{
+    position: absolute;
+    top: 27px;
+    left: 36px;
+  }
+  .popup-exhibition__link{
+    bottom: -36px;
+    right: 18px;
+    left: auto;
+  }
+}
