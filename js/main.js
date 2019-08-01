@@ -47,7 +47,7 @@ $(document).ready(function () {
         $('.page-menu').addClass('was-animated');
     }
 
-    function menuCloseAnimation() {
+    function menuResetAnimation() {
         var tl = new TimelineMax({
             repeat: 0,
             ease: Expo.easeOut
@@ -69,7 +69,7 @@ $(document).ready(function () {
             $('.page-menu').toggleClass('is-active');
 
             if ($('.page-menu').hasClass('was-animated')) {
-                menuCloseAnimation();
+                menuResetAnimation();
             } else {
                 menuOpenAnimation();
             }
@@ -81,7 +81,7 @@ $(document).ready(function () {
         if ($('.page-menu').hasClass('is-active')) {
             if (!$(e.target).closest('.page-menu.is-active').length) {
                 headerReset();
-                menuCloseAnimation();
+                menuResetAnimation();
             }
         }
     });
@@ -93,31 +93,63 @@ $(document).ready(function () {
         var $this = $(this),
             href = $this.attr('href'),
             parent = $this.parent();
-       parent.siblings('.how-tab__link-item').removeClass('is-active');
-       parent.addClass('is-active');
-       $('.how-tab__item').removeClass('is-active');
-       $this.parents('.homepage-how').find('.how-tab__item' + href).addClass('is-active');
+        parent.siblings('.how-tab__link-item').removeClass('is-active');
+        parent.addClass('is-active');
+        $('.how-tab__item').removeClass('is-active');
+        $this.parents('.homepage-how').find('.how-tab__item' + href).addClass('is-active');
     });
-    /// HOMEPAGE tabs
 
+    /// WORK tab
+    $('.tab-work__slider').slick({
+        mobileFirst: true,
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings:
+                    {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: false,
+                    dots: false,
+                    arrows: false
+                }
+            },
+        ]
+    });
 
-    function buildTabAnimation(){
-        var colDefault = $('.tab-build__col-default');
-        if (colDefault.hasClass('was-animated')){
-            return
-        }else{
-            colDefault.addClass('was-animated');
-            setTimeout(function () {
-                colDefault.hide();
-            },100)
+    /// BUILD tab
+    function buildTabAnimation() {
+        var colDefault = $('.tab-build__default');
+        if (colDefault.hasClass('was-animated')) {
+            return;
+        } else {
+            colDefault.addClass('was-animated').addClass('is-removed');
+            $('.how-tab__item-footer').removeClass('is-hidden');
+            $('.tab-build__events').addClass('is-visible');
         }
     }
     /// DATEPICKER jquery ui
-    $(document).on('change', '.page__calendar', function(){
-        console.log($(this))
+    $(document).on('change', '.page__calendar', function () {
+        var date = $(this).val();  ///mm-dd-yyyy
+        var table = $('.tab-build__events-table');
+        var tableActive = $('.tab-build__events').find('.tab-build__events-table[data-date="' + date + '"]');
+        var tableDefault = $('.tab-build__events-table.is-default');
         buildTabAnimation();
-
+        if (tableActive.length === 0){
+            table.removeClass('is-active');
+            tableDefault.addClass('is-active');
+        }else{
+            table.removeClass('is-active');
+            tableDefault.removeClass('is-active');
+            tableActive.addClass('is-active');
+        }
     });
+    /// HOMEPAGE tabs
 
     $(window).resize(function () {
         headerReset();

@@ -24,54 +24,56 @@
 
     <!--page menu-->
     <div class="page-menu">
-        <div class="page-menu__header">
-            <a href="#" class="header__btn animated">
-                <i class="icon icon-user"></i>
-            </a>
-            <a href="#" class="header__btn animated">
-                <i class="icon icon-basket"></i>
-            </a>
-            <a href="#" class="btn btn--animated btn--white btn--sm header__book">Book now</a>
-            <button class="header__hamburger">
-                <i class="icon icon-cross"></i>
-            </button>
-        </div>
-        <nav class="page-nav">
-            <ul class="page-nav__list">
-                <li class="page-nav__list-item page-nav__list-item--lg"><a href="#" class="page-nav__list-link">Things
-                    to see & do</a></li>
-                <li class="page-nav__list-item page-nav__list-item--lg"><a href="#" class="page-nav__list-link">Plan
-                    your visit</a></li>
-                <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Schools & Nurseries</a></li>
-                <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Who we are</a></li>
-                <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Support us</a></li>
-            </ul>
-        </nav>
-        <div class="page-menu__exhibition">
-            <div class="popup-exhibition__content">
-                <div class="popup-exhibition__content-inner">
-                    <div class="p--small popup-exhibition__title">
-                        <p>Exhibition</p>
+        <div class="page-menu__inner">
+            <div class="page-menu__header">
+                <a href="#" class="header__btn animated">
+                    <i class="icon icon-user"></i>
+                </a>
+                <a href="#" class="header__btn animated">
+                    <i class="icon icon-basket"></i>
+                </a>
+                <a href="#" class="btn btn--animated btn--white btn--sm header__book">Book now</a>
+                <button class="header__hamburger">
+                    <i class="icon icon-cross"></i>
+                </button>
+            </div>
+            <nav class="page-nav">
+                <ul class="page-nav__list">
+                    <li class="page-nav__list-item page-nav__list-item--lg"><a href="#" class="page-nav__list-link">Things
+                        to see & do</a></li>
+                    <li class="page-nav__list-item page-nav__list-item--lg"><a href="#" class="page-nav__list-link">Plan
+                        your visit</a></li>
+                    <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Schools & Nurseries</a></li>
+                    <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Who we are</a></li>
+                    <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Support us</a></li>
+                </ul>
+            </nav>
+            <div class="page-menu__exhibition">
+                <div class="popup-exhibition__content">
+                    <div class="popup-exhibition__content-inner">
+                        <div class="p--small popup-exhibition__title">
+                            <p>Exhibition</p>
+                        </div>
+                        <h4>The Tiger Who Came to Tea</h4>
                     </div>
-                    <h4>The Tiger Who Came to Tea</h4>
                 </div>
-            </div>
-            <div class="popup-exhibition__img">
-                <img src="img/homepage/exhibition-popup.jpg" alt="">
-            </div>
-            <a href="#" class="popup-exhibition__link arrow arrow--sm arrow--baseColor animated">
-                <i class="icon-arrow-right"></i>
-            </a>
-        </div>
-        <div class="page-menu__search">
-            <form action="#" class="search-form">
-                <div class="menu-search__input-wrap">
-                    <input type="search" class="search__input">
-                    <button type="submit" class="menu-search__submit-btn">
-                        <i class="icon icon-search"></i>
-                    </button>
+                <div class="popup-exhibition__img">
+                    <img src="img/homepage/exhibition-popup.jpg" alt="">
                 </div>
-            </form>
+                <a href="#" class="popup-exhibition__link arrow arrow--sm arrow--baseColor animated">
+                    <i class="icon-arrow-right"></i>
+                </a>
+            </div>
+            <div class="page-menu__search">
+                <form action="#" class="search-form">
+                    <div class="menu-search__input-wrap">
+                        <input type="search" class="search__input">
+                        <button type="submit" class="menu-search__submit-btn">
+                            <i class="icon icon-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <div class="page-menu__overlay"></div>
@@ -87,7 +89,7 @@
                         <img src="img/logo.svg" alt="Discover Children's Story Centre">
                     </a>
                     <div class="header__inner--right">
-                        <a href="#" class="btn btn--animated btn--white btn--sm header__book">Book now</a>
+                        <a href="#" class="btn btn--animated btn--white btn--sm header__book hide-in-mob">Book now</a>
                         <button class="header__hamburger">
                             <i class="icon icon-menu"></i>
                         </button>
@@ -113,8 +115,11 @@
                 & their families can enjoy <br>
                 playing, learning & making <br>
                 up stories together!</h1>
+            <div class="homepage-hero__content-btn show-in-mob">
+                <a href="#" class="btn btn--white">Book now</a>
+            </div>
         </div>
-        <div class="popup-exhibition">
+        <div class="popup-exhibition hide-in-mob">
             <div class="popup-exhibition__content">
                 <div class="popup-exhibition__content-inner">
                     <div class="p--small popup-exhibition__title">
@@ -206,42 +211,44 @@
             <div class="how-tab__item how-tab__item--work" id="how-tab__work">
                 <div class="main-container">
                     <div class="how-tab__item-inner">
-                        <div class="tab-work__title">
+                        <div class="tab-work__title hide-in-mob">
                             <p>
                                 Ilinam isquodi pre oris. Ex num, sediend eessulu ternum fatum vestis uius num, sediend
                                 sediend eessulu ternum fatum vestis uiu.
                             </p>
                         </div>
                         <div class="tab-work__list how-tab__item-row">
-                            <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
-                                <div class="tab-work__list-num animated">
-                                    <span>1</span>
+                            <div class="tab-work__slider">
+                                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
+                                    <div class="tab-work__list-num animated">
+                                        <span>1</span>
+                                    </div>
+                                    <h2>Pick your <br>
+                                        day pass</h2>
+                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
                                 </div>
-                                <h2>Pick your <br>
-                                    day pass</h2>
-                                <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
-                            </div>
-                            <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
-                                <div class="tab-work__list-num animated">
-                                    <span>2</span>
+                                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
+                                    <div class="tab-work__list-num animated">
+                                        <span>2</span>
+                                    </div>
+                                    <h2>Build <br>
+                                        your day!</h2>
+                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
                                 </div>
-                                <h2>Build <br>
-                                    your day!</h2>
-                                <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
-                            </div>
-                            <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
-                                <div class="tab-work__list-num animated">
-                                    <span>3</span>
+                                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
+                                    <div class="tab-work__list-num animated">
+                                        <span>3</span>
+                                    </div>
+                                    <h2>Finalise <br>
+                                        your order</h2>
+                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
                                 </div>
-                                <h2>Finalise <br>
-                                    your order</h2>
-                                <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="how-tab__item-footer">
-                    <div class="tab-work__btn">
+                    <div class="how-tab__footer-btn">
                         <button type="button" class="btn btn--animated btn--lg btn--yellow">start building my day
                             pass!
                         </button>
@@ -255,7 +262,7 @@
                 <div class="main-container">
                     <div class="how-tab__item-inner">
                         <div class="how-tab__item-row">
-                            <div class="how-tab__item-col how-tab__item-col--2 tab-build__col-default">
+                            <div class="how-tab__item-col how-tab__item-col--2 tab-build__col tab-build__default">
                                 <div class="tab-build__content">
                                     <h2>To begin building your day pass,
                                         first you’ll need to select a date!</h2>
@@ -263,8 +270,9 @@
                                         incerum.
                                         Num, sediend eessulu ternum fatum vestis. Fuius incerum.</p>
                                     <div class="tab-build__helper">
-                                        <div class="hootah hootah--md tab-build__hootah">
-                                            <img src="img/bird-small-left.png" class="hootah__img" alt="">
+                                        <div class="hootah hootah--md hootah--right tab-build__hootah">
+                                            <!--<img src="img/bird-small-left.png" class="hootah__img" alt="">-->
+                                            <img src="img/bird-md.png" class="hootah__img" alt="">
                                         </div>
                                         <div class="speech-bubble speech-bubble--left bubble-text tab-build__bubble">
                                             <p>Apeles <br> volum quo quiassi taerciendio mil iunde</p>
@@ -272,10 +280,159 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="how-tab__item-col how-tab__item-col--1">
-                               <div id="page__calendar" class="page__calendar"></div>
+                            <div class="how-tab__item-col how-tab__item-col--1 tab-build__col">
+                                <div id="page__calendar" class="page__calendar"></div>
+                            </div>
+                            <div class="how-tab__item-col how-tab__item-col--2 tab-build__col tab-build__events">
+                                <div class="tab-build__events-table is-default is-active" data-date="08/15/2019">
+                                    <div class="tab-build__events-header">
+                                        <p>Showing what’s on for: <span
+                                                class="tab-build__events-date">Wednesday 26 July</span></p>
+                                    </div>
+                                    <div class="tab-build__events-body">
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Story Worlds</span>
+                                                <span class="tab-build__events-schedule">Every day 10.00am – 5.00pm</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
+                                            <p>
+                                                <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-schedule">12.30am</span>
+                                                <span class="tab-build__events-schedule">1.00am</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-label">Last Few</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-label">Last Few</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-build__events-table" data-date="08/16/2019">
+                                    <div class="tab-build__events-header">
+                                        <p>Showing what’s on for: <span
+                                                class="tab-build__events-date">Friday 16 August</span></p>
+                                    </div>
+                                    <div class="tab-build__events-body">
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Story Worlds</span>
+                                                <span class="tab-build__events-schedule">Every day 10.00am – 5.00pm</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
+                                            <p>
+                                                <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-schedule">12.30am</span>
+                                                <span class="tab-build__events-schedule">1.00am</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-label">Last Few</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-label">Last Few</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-build__events-table" data-date="08/17/2019">
+                                    <div class="tab-build__events-header">
+                                        <p>Showing what’s on for: <span class="tab-build__events-date">Saturday 17 August</span>
+                                        </p>
+                                    </div>
+                                    <div class="tab-build__events-body">
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Story Worlds</span>
+                                                <span class="tab-build__events-schedule">Every day 10.00am – 5.00pm</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
+                                            <p>
+                                                <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-schedule">12.30am</span>
+                                                <span class="tab-build__events-schedule">1.00am</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-label">Last Few</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                                <span class="tab-build__events-label">Last Few</span>
+                                            </p>
+                                        </div>
+                                        <div class="tab-build__events-row tab-build__events-row">
+                                            <p>
+                                                <span class="tab-build__events-name">Event name</span>
+                                                <span class="tab-build__events-schedule">11.30am</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="how-tab__item-footer how-tab__item-footer--build is-hidden">
+                    <div class="how-tab__footer-btn">
+                        <button type="button" class="btn btn--animated btn--lg btn--yellow">start building my day
+                            pass!
+                        </button>
                     </div>
                 </div>
             </div>
@@ -302,9 +459,12 @@
 <script src="js/main.js"></script>
 
 <script>
-    $( function() {
-        $( "#page__calendar" ).datepicker();
-    } );
+    $(function () {
+        $("#page__calendar").datepicker({
+            minDate: "-1M", maxDate: "+2M"
+        });
+    });
+
 </script>
 
 <script>
