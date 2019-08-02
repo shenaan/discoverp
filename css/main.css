@@ -2499,7 +2499,7 @@ body {
     color: #333; }
   @media (min-width: 1024px) {
     .homepage-how {
-      margin-bottom: -166px; } }
+      margin-top: -166px; } }
 
 .img-fallback {
   background-color: #c8c9c7; }
@@ -3188,8 +3188,7 @@ img[data-srcset] {
     .how-tab__links {
       position: relative;
       left: 0;
-      right: 0;
-      top: -166px; } }
+      right: 0; } }
 
 .how-tab__links-inner {
   display: -webkit-box;
@@ -3352,7 +3351,6 @@ img[data-srcset] {
   transition: 0.4s all ease-in-out; }
   @media (min-width: 1024px) {
     .how-tabs__wrap {
-      top: -166px;
       position: relative; } }
 
 .how-tab__item {
@@ -3532,7 +3530,10 @@ img[data-srcset] {
   will-change: auto;
   transition: transform 0.3s ease-in-out;
   position: absolute;
-  top: 48px; }
+  top: 48px;
+  display: none; }
+  .tab-build__events.is-added {
+    display: block; }
   .tab-build__events.is-visible {
     transform: translateX(0);
     opacity: 1;
