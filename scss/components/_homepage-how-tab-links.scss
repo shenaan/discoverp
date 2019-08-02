@@ -16,7 +16,7 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
     position: relative;
     left: 0;
     right: 0;
-    top: -166px;
+    //top: -166px;
   }
 }
 
@@ -37,27 +37,21 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
   max-width: 100%;
   position: relative;
 
-
   &.is-active{
     &:before, &:after{
       content: '';
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -8px;
       z-index: 1;
-      background-color: $yellowTabLink;
-      //height: 22px;
-      //width: 22px;
-      border-radius: 25px;
-      border-bottom: 25px solid $yellowTabLink;
+      //background-color: $yellowTabLink;
+      width: 46px;
+      height: 52px;
+      -webkit-background-size: contain;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    &:before{
-      left: 0;
-    }
-    &:after{
-      right: 0;
-    }
-
     .how-tab__link{
       background-color: $yellowTabLink;
       @include transition(none);
@@ -83,6 +77,16 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
     padding: 0 9px;
 
     &.is-active{
+      &:before{
+        left: -23px;
+        background-image: url('#{$imgUrl}homepage/round-corner-left.png');
+
+      }
+      &:after{
+        right: -25px;
+        background-image: url('#{$imgUrl}homepage/round-corner-right.png');
+      }
+
       .how-tab__link{
         height: 144px;
         background-color: $yellowTabLink;

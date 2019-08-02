@@ -19,6 +19,9 @@
     width: 0;
     height: 0;
   }
+  &.is-terminated{
+    display: none;
+  }
 }
 
 .tab-build__content {

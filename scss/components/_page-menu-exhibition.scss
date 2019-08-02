@@ -8,6 +8,7 @@
     left: auto;
     border-radius: 0;
     border-color: $textColor;
+    padding: 33px 30px 37px 20px;
   }
   .popup-exhibition__content-inner{
     max-width: 50%;
@@ -29,9 +30,9 @@
       width: 302px;
       left: auto;
       margin-left: auto;
-      padding-bottom: 2 * $gap;
       border-radius: $radius;
       border: 2px solid #fff;
+      padding: 22px 30px 2 * $gap 20px;
     }
     .popup-exhibition__content-inner{
       margin-left: auto;

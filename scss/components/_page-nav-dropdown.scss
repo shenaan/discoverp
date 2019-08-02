@@ -1,0 +1,31 @@
+.page-nav__dropdown{
+  display: none;
+  margin: 0 -20px;
+  padding: 0px 20px 27px;
+  @include box-shadow-mob-inset;
+  &.is-hidden{
+    .page-nav__dropdown-item{
+      opacity: 0;
+    }
+  }
+  @include respond-to(md){
+    display: none !important;
+  }
+}
+
+.page-nav__dropdown-item{
+  font-size: 0.9rem;  //18px
+  font-weight: normal;
+  display: block;
+  margin-bottom: 13px;
+  transition: 0.3s opacity ease 0.2s;
+
+  &:last-of-type{
+    margin-bottom: 0;
+  }
+}
+
+.page-nav__dropdown-link{
+  display: inline-block;
+  color: #fff;
+}

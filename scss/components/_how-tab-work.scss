@@ -3,9 +3,12 @@
   p {
     text-align: center;
   }
-  .how-tab__item-inner {
-    padding-left: 80px;
-    padding-right: 80px;
+
+  @include respond-to(md){
+    .how-tab__item-inner {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
   }
 }
 
@@ -62,7 +65,25 @@
 .tab-work__slider{
   display: block;
   width: 100%;
-  .slick-track{
-    //width: 100% !important;
+  .slick-arrow{
+    @include size(68px, 91px);
+    background-color: $yellowColorTint;
+    border: 1px solid #fff;
+    &.slick-next {
+      right: -20px;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+      &:after {
+        background: url("#{$imgUrl}/arrow-next.png")no-repeat center/ 18px 30px;
+      }
+    }
+    &.slick-prev {
+      left: -20px;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      &:after {
+        background: url("#{$imgUrl}/arrow-prev.png")no-repeat center/ 18px 30px;
+      }
+    }
   }
 }

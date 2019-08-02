@@ -34,9 +34,7 @@ body {
 .is-mobile{
   display: block;
 
-  @include respond-min(992){
+  @include respond-min(1024){
     display: none;
   }
 }
-
-

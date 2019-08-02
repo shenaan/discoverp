@@ -373,17 +373,25 @@
   @include transition(all 800ms cubic-bezier(0.19, 1, 0.22, 1));
 }
 
+//main box shadow
 @mixin box-shadow($color: rgba(99, 70, 87, 0.36) ) {
   -webkit-box-shadow: 4px 4px 7px 0px $color;
   box-shadow: 4px 4px 7px 0px $color;
 }
 
-@mixin box-shadow-mob($color: rgba(99, 70, 87, 1) ) {
-  -webkit-box-shadow: 0px 4px 7px 0px $color;
-  box-shadow: 0px 4px 7px 0px $color;
+//bottom box shadow on 'after' elements on mob
+@mixin box-shadow-mob($color: rgba(26, 25, 26, 0.25) ) {
+  -webkit-box-shadow: 0px 3px 4px 1px $color;
+  box-shadow: 0px 3px 4px 1px $color;
 }
 
-@mixin box-shadow-top($color: rgba(99, 70, 87, 0.36) ) {
+//bottom inset box shadow on mob
+@mixin box-shadow-mob-inset($color: rgba(26, 25, 26, 0.25) ) {
+  -webkit-box-shadow: inset 0px -4px 7px 0px $color;
+  box-shadow:  inset 0px -4px 7px 0px $color;
+}
+
+@mixin box-shadow-top($color: rgba(26, 25, 26, 0.25) ) {
   -webkit-box-shadow: 0px -4px 7px 0px $color;
   box-shadow: 0px -4px 7px 0px $color;
 }

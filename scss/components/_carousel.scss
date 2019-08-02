@@ -14,13 +14,14 @@
 
 .slick-arrow {
   position: absolute;
-  background: transparent;
+  background: #fff;
   font-size: 0;
   border: none;
   display: block;
-  @include size(90px,14px);
+  @include square(90px);
   z-index: 0;
-  bottom: 40px;
+  top: 0px;
+  bottom: 0;
   margin: auto;
   outline: none !important;
   @include transition-03();
@@ -33,7 +34,7 @@
     right: 0;
     bottom: 0px;
     margin: auto;
-    @include size(90px, 14px);
+    @include size(42px, 34px);
     -webkit-background-size: contain;
     background-size: contain;
     background-position: center;
@@ -46,12 +47,14 @@
   }
   &.slick-next {
     right: 0;
-    left: 0;
     &:after {
       //background-image: url("#{$imgUrl}general/slider-next-icon.svg")
     }
   }
   &.slick-prev {
-    display: none;
+    left: 0;
+    &:after {
+      //background-image: url("#{$imgUrl}general/slider-next-icon.svg")
+    }
   }
 }
