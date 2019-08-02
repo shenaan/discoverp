@@ -1,9 +1,13 @@
 .tab-directions__map{
-  height: 440px;
+  height: 375px;
   width: 100%;
   border-radius: $radius;
   @include box-shadow;
   overflow: hidden;
+
+  @include respond-to(md){
+    height: 440px;
+  }
 }
 
 .tab-directions__info{
@@ -21,6 +25,9 @@
 
   h2{
     margin-bottom: 22px;
+  }
+  @include respond-to(md){
+    padding: 27px 45px 64px 20px;
   }
 }
 
@@ -51,6 +58,27 @@
     &-telephone{
       font-size: 25px;
     }
+  }
+  @include respond-to(lg){
+    padding-left: 45px;
+  }
+}
+
+.tab-direction__helper{
+  position: absolute;
+  right: 7px;
+  bottom: 0;
+  width: 200px;
+  height: 300px;
+
+  @include respond-to(md){
+    right: 19px;
+    bottom: 13px;
+  }
+
+  @include respond-to(lg){
+    right: 7px;
+    bottom: 0;
   }
 }
 

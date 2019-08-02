@@ -8,7 +8,6 @@
   position: absolute;
   @include display-flex;
   @include ai-flex-center;
-  @include jc-flex-center;
 
   &--right{
     background-image: url("#{$imgUrl}bubble-right.png");

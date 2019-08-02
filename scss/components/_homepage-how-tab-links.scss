@@ -1,10 +1,6 @@
 $yellowTabLink: #ebc850; /// darker yellow color for tab links
 
 .how-tab__links{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -166px;
   z-index: 10;
   &:after{
     content: '';
@@ -15,19 +11,32 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
     height: 22px;
     width: 100%;
   }
+
+  @include respond-to(md){
+    position: relative;
+    left: 0;
+    right: 0;
+    top: -166px;
+  }
 }
 
 .how-tab__links-inner{
   @include display-flex;
-  align-items: flex-end;
-  margin: 0 -9px;
+  @include flex-direction-col;
+  margin: 0 -20px;
+
+  @include respond-to(md){
+    @include flex-direction-row;
+    @include ai-flex-end;
+    margin: 0 -9px;
+  }
 }
 
 .how-tab__link-item{
-  width: 33.33%;
-  max-width: 33.33%;
-  padding: 0 9px;
+  width: 100%;
+  max-width: 100%;
   position: relative;
+
 
   &.is-active{
     &:before, &:after{
@@ -50,30 +59,54 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
     }
 
     .how-tab__link{
-      height: 144px;
       background-color: $yellowTabLink;
-      border-bottom: 3px solid $yellowTabLink;
       @include transition(none);
-      &:after{
-        content: '';
-        display: block;
+
+      .how-tab__link-btn{
+        border-color: #fff;
+        i{
+          &.icon-open{
+            opacity: 0;
+            visibility: hidden;
+          }
+          &.icon-close{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to(md){
+    width: 33.33%;
+    max-width: 33.33%;
+    padding: 0 9px;
+
+    &.is-active{
+      .how-tab__link{
+        height: 144px;
         background-color: $yellowTabLink;
-        z-index: 1;
-        height: 3px;
-        width: 100%;
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        right: 0;
-      }
-      h3{
-        font-size: 2.25rem;
-        line-height: 2.1rem;
-        max-width: 210px;
-        @include center();
-      }
-      br{
-        display: block;
+        border-bottom: 3px solid $yellowTabLink;
+        &:after{
+          content: '';
+          display: block;
+          background-color: $yellowTabLink;
+          z-index: 1;
+          height: 3px;
+          width: 100%;
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+          right: 0;
+        }
+        h3{
+          font-size: 2.25rem;
+          line-height: 2.1rem;
+          max-width: 210px;
+        }
+        br{
+          display: block;
+        }
       }
     }
   }
@@ -82,20 +115,80 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
 .how-tab__link{
   @include display-flex;
   @include ai-flex-center;
-  @include jc-flex-center;
   background-color: #fdf9ed;
   color: #333;
   padding: 10px;
-  height: 99px;
-  border-top-left-radius: $radius;
-  border-top-right-radius: $radius;
+  height: 83px;
   border: 1px solid #fff;
   position: relative;
+  @include transition(0.2s background-color ease-in-out);
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    @include box-shadow-mob;
+    z-index: 1;
+  }
+
   h3{
     line-height: 1.3rem;
-    text-align: center;
+    text-align: left;
   }
   br{
     display: none;
   }
+
+  @include respond-to(md){
+    height: 99px;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    &:before{
+      display: none;
+    }
+
+    h3{
+      text-align: center;
+      @include center;
+    }
+  }
+}
+
+.how-tab__link-btn{
+  position: relative;
+  display: block;
+  margin-left: auto;
+  border: 1px solid #d9d7cc;
+  border-radius: 50%;
+  @include square(40px);
+  i{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &.icon-open{
+      opacity: 1;
+      visibility: visible;
+      background-image: url('#{$imgUrl}arrow-down.png');
+      @include size(18px, 15px);
+    }
+    &.icon-close{
+      opacity: 0;
+      visibility: hidden;
+      background-image: url('#{$imgUrl}icon-close.png');
+      @include size(15px, 15px);
+    }
+  }
+
 }

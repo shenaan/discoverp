@@ -4,9 +4,24 @@
     width: 81px;
   }
   &--md{
-    width: 182px;
+    width: 142px;
+  }
+  &--right{
+    img{
+      -webkit-transform: rotate3d(0, 1, 0, 180deg);
+      transform: rotate3d(0, 1, 0, 180deg);
+    }
   }
   img{
     width: 100%;
+  }
+
+  @include respond-to(md){
+    &--sm{
+      width: 81px;
+    }
+    &--md{
+      width: 182px;
+    }
   }
 }

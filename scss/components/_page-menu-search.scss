@@ -2,14 +2,29 @@
   margin-top: auto;
   width: 100%;
   opacity: 0;
+  height: 97px;
+
+  @include respond-to(md){
+    height: auto;
+  }
 }
 
 .menu-search__input-wrap{
   position: relative;
-  max-width: 390px;
-  margin-left: auto;
+  padding-left: 20px;
+  padding-right: 20px;
   input{
     padding-right: 60px;
+    background-color: #abc6e4;
+  }
+  @include respond-to(md){
+    max-width: 390px;
+    margin-left: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    input{
+      background-color: #fff;
+    }
   }
 }
 
@@ -17,7 +32,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 15px;
+  right: 45px;
   margin: auto;
   display: block;
   background-color: transparent;
@@ -28,5 +43,9 @@
   .icon{
     font-size: 30px;
     color: $textColor;
+  }
+
+  @include respond-to(md){
+    right: 15px;
   }
 }

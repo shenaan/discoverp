@@ -6,21 +6,34 @@ html {
 }
 
 h1, .h1 {
-  font-size: 2.25rem;  //45px;
+  font-size: 2.25rem; //45px;
   font-weight: bold;
-  line-height: 2.4rem //48px;
+  line-height: 2.4rem; //48px;
+
+  @include respond-to(md) {
+    font-size: 2.25rem; //45px;
+    font-weight: bold;
+    line-height: 2.4rem; //48px;
+  }
 }
 
 h2, .h2 {
-  font-size: 1.75rem; //35px;
+  font-size: 1.6rem; //32px
   font-weight: bold;
-  line-height: 1.9rem //38px;
+  @include respond-to(md){
+    font-size: 1.75rem; //35px;
+    line-height: 1.9rem //38px;
+  }
 }
 
 h3, .h3 {
-  font-size: 1.5rem; //30px;
   font-weight: bold;
-  line-height: 1.65rem; //33px;
+  font-size: 1.3rem; //23px;
+  line-height: 1.55rem;  //31px
+  @include respond-to(md){
+    font-size: 1.5rem; //30px;
+    line-height: 1.65rem; //33px;
+  }
 }
 
 h4, .h4 {
@@ -29,24 +42,24 @@ h4, .h4 {
   line-height: 1.4rem; //28px;
 }
 
-.quote-text{
-  p{
+.quote-text {
+  p {
     font-size: 1.75rem; //35px;
     font-weight: bold;
     line-height: 1.9rem; //38px;
   }
 }
 
-.feature-text{
-  p{
+.feature-text {
+  p {
     font-size: 1.5rem; //30px;
     font-weight: 600;
     line-height: 1.65rem; //33px;
   }
 }
 
-.body-feature{
-  p{
+.body-feature {
+  p {
     font-size: 1.25rem; //25px;
     font-weight: 300;
     line-height: 1.4rem; //28px;
@@ -58,35 +71,45 @@ p {
   font-weight: 300;
   line-height: 1.15rem; //23px;
 
-  &:last-of-type{
+  &:last-of-type {
     margin-bottom: 0;
   }
 }
 
-.p--small{
-  p{
+.p--small {
+  p {
     font-size: 0.8rem; //16px;
     font-weight: 300;
     line-height: 1.95rem; //19px;
   }
 }
 
-.bubble-text{
-  p{
+.bubble-text {
+  p {
     font-family: $Comic;
-    font-size: 0.65rem !important; //13px;
-    line-height: 0.8rem !important; //16px;
+    font-size: 0.6rem !important; //12px;
+    line-height: 0.65rem !important; //13px;
+
+    @include respond-to(md){
+      font-size: 0.65rem !important; //13px;
+      line-height: 0.8rem !important; //16px;
+    }
   }
 }
 
 /// HOMEPAGE Text Styles
 
-.homepage-content__wrap{
-  p{
-    font-size: 1.25rem;
-    line-height: 1.4rem;
+.homepage-content__wrap {
+  p {
+    font-size: 1rem; /// 22px
+    line-height: 1.15rem; ///23px
+
+    @include respond-to(lg){
+      font-size: 1.25rem; /// 25px
+      line-height: 1.4rem; ///28px
+    }
   }
-  h2{
-    line-height: 1.65rem;
+  h2 {
+    line-height: 1.65rem; ///33px
   }
 }

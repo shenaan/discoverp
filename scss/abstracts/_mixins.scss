@@ -378,9 +378,14 @@
   box-shadow: 4px 4px 7px 0px $color;
 }
 
+@mixin box-shadow-mob($color: rgba(99, 70, 87, 1) ) {
+  -webkit-box-shadow: 0px 4px 7px 0px $color;
+  box-shadow: 0px 4px 7px 0px $color;
+}
+
 @mixin box-shadow-top($color: rgba(99, 70, 87, 0.36) ) {
-  -webkit-box-shadow: 0px -2px 7px 0px $color;
-  box-shadow: 0px -2px 7px 0px $color;
+  -webkit-box-shadow: 0px -4px 7px 0px $color;
+  box-shadow: 0px -4px 7px 0px $color;
 }
 
 @mixin hover-scale() {

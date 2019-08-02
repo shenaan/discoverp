@@ -4,23 +4,52 @@
 
   .popup-exhibition__content{
     @include rotate(0);
-    width: 302px;
+    width: 100%;
     left: auto;
-    margin-left: auto;
-    padding-bottom: 2 * $gap;
+    border-radius: 0;
+    border-color: $textColor;
   }
   .popup-exhibition__content-inner{
-    margin-left: auto;
-    text-align: right;
+    max-width: 50%;
   }
   .popup-exhibition__img{
-    position: absolute;
-    top: 27px;
-    left: 36px;
+    display: none;
   }
   .popup-exhibition__link{
-    bottom: -36px;
-    right: 18px;
+    bottom: 0px;
+    top: 0;
+    right: 20px;
     left: auto;
+    margin: auto;
+  }
+
+  @include respond-to(md){
+    .popup-exhibition__content{
+      @include rotate(0);
+      width: 302px;
+      left: auto;
+      margin-left: auto;
+      padding-bottom: 2 * $gap;
+      border-radius: $radius;
+      border: 2px solid #fff;
+    }
+    .popup-exhibition__content-inner{
+      margin-left: auto;
+      text-align: right;
+      max-width: 175px;
+    }
+    .popup-exhibition__img{
+      @include display-flex;
+      position: absolute;
+      top: 27px;
+      left: 36px;
+    }
+    .popup-exhibition__link{
+      bottom: -36px;
+      right: 18px;
+      left: auto;
+      top: auto;
+      margin: 0;
+    }
   }
 }

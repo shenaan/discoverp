@@ -22,9 +22,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  @include display-flex;
-  @include flex-direction-col;
-  padding: 54px 85px 45px 74px;
+  left: 0;
   background-color: $blueColor;
   overflow-y: auto;
   overflow-x: hidden;
@@ -39,39 +37,92 @@
     visibility: visible;
     @include translateX(0);
   }
+
+  @include respond-to(md){
+    width: auto;
+    left: auto;
+    padding: 54px 85px 45px 74px;
+  }
+}
+
+.page-menu__inner{
+  height: 100%;
+  @include display-flex;
+  @include flex-direction-col;
 }
 
 .page-menu__header {
   @include display-flex;
   @include jc-flex-end;
   @include ai-flex-center;
-  margin-bottom: calc(64px - 6px);  ///2 * $gap;
+  border-bottom: 2px solid #fff;
+  height: 95px;
+  width: 100%;
+  @include box-shadow;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  .header__hamburger{
+    @include square(53px);
+    margin-left: auto;
+  }
+
+  @include respond-to(md){
+    border-bottom: 0;
+    margin-bottom: calc(64px - 6px);  ///2 * $gap;
+    height: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+
+    .header__hamburger{
+      @include square(63px);
+      margin-left: 7px;
+    }
+  }
 }
 
 .page-nav {
-  padding: 0 0 2*$gap 90px;
-  padding-bottom: calc(64px - 6px);  ///2 * $gap;
+  @include respond-to(md){
+    padding: 0 0 2*$gap 90px;
+    padding-bottom: calc(64px - 6px);  ///2 * $gap;
+  }
 }
 
 .page-nav__list {
-  text-align: right;
+  @include respond-to(md){
+    text-align: right;
+  }
 }
 
 .page-nav__list-item {
-  display: block;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  margin-bottom: 0.5 * $gap;
-  font-weight: 600;
+  @include display-flex;
+  @include ai-flex-center;
+  height: 2 * $gap;
+  font-size: 1.25rem; //25px
+  line-height: 1;
+  font-weight: 800;
   opacity: 0;
-  &--lg {
-    font-size: 2rem;
-    //line-height: 3rem;
-    margin-bottom: $gap;
-    font-weight: 800;
-  }
+  padding-right: 20px;
+  padding-left: 20px;
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  @include respond-to(md){
+    display: block;
+    height: auto;
+    font-size: 1.5rem;
+    margin-bottom: 0.5 * $gap;
+    font-weight: 600;
+    padding-right: 0px;
+    padding-left: 0px;
+    &--lg {
+      font-size: 2rem;
+      margin-bottom: $gap;
+      font-weight: 800;
+    }
   }
 }
 
@@ -79,4 +130,7 @@
   display: inline-block;
   color: #fff;
   line-height: 1;
+  @include box-shadow-mob;
+
+  @include box-shadow(rgba(0,0,0,0));
 }

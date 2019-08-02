@@ -1,13 +1,25 @@
+$eventTableTextColor: #333;
+
 .page__calendar {
 
   .ui-widget.ui-widget-content {
     border: none;
     border-radius: $radius;
     @include box-shadow;
-    width: 100%;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    @include center();
     font-family: $baseFontFamily !important;
-    color: #333;
+    color: $eventTableTextColor;
     padding: 0 20px 30px 20px;
+
+    @include respond-to(md){
+      margin-left: auto;
+    }
+    @include respond-to(lg){
+      width: 100%;
+    }
   }
 
   .ui-datepicker .ui-datepicker-header {
@@ -33,18 +45,18 @@
   }
 
   .ui-datepicker .ui-datepicker-prev span {
-    background: url("#{$imgUrl}arrow-prev.svg") no-repeat center /contain;
+    background: url("#{$imgUrl}arrow-prev.png") no-repeat center /contain;
     @include size(12px, 21px);
   }
   .ui-datepicker .ui-datepicker-next span {
-    background: url("#{$imgUrl}arrow-next.svg") no-repeat center /contain;
+    background: url("#{$imgUrl}arrow-next.png") no-repeat center /contain;
     @include size(12px, 21px);
   }
 
   .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover {
     background: transparent;
     border: none;
-    color: #333;
+    color: $eventTableTextColor;
   }
 
   .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
@@ -59,7 +71,6 @@
   }
 
   .ui-datepicker tbody tr {
-
     &:last-of-type {
       td {
         border-bottom: none;
@@ -68,6 +79,7 @@
     td {
       border-bottom: 1px solid #e7e7e7;
       border-left: 1px solid #e7e7e7;
+      position: relative;
       &:first-of-type {
         border-left: none;
       }
@@ -76,20 +88,48 @@
 
   .ui-datepicker td {
     padding: 0;
-    width: 50px;
-    height: 50px;
+   @include square(40px);
 
-    &.ui-datepicker-current-day {
-      a {
-        font-size: 32px;
+    &.ui-datepicker-current-day, &.ui-datepicker-current-day.ui-datepicker-today{
+      a{
+        font-size: 1.25rem;  //25px
         color: #fff;
-        position: relative;
+        position: absolute;
         background-color: $textColor;
         border-radius: 50%;
-        @include square(130%);
-        left: -15%;
+        @include square(120%);
+        left: -10%;
+        top: -10%;
+
+        @include respond-to(lg){
+          left: -20%;
+          top: -20%;
+          @include square(140%);
+          font-size: 1.6rem; //32px
+        }
       }
     }
+    &.ui-datepicker-today{
+      a {
+        color: $eventTableTextColor;
+        background-color: #fff;
+        @include square(100%);
+        border-radius: 0;
+        font-weight: normal;
+        left: auto;
+        top: auto;
+        font-size: 1rem;
+        position: relative;
+      }
+    }
+
+    @include respond-to(lg){
+      @include square(50px);
+    }
+  }
+
+  .ui-datepicker-year{
+    display: none;
   }
 
   .ui-datepicker td span, .ui-datepicker td a {
@@ -99,7 +139,7 @@
     @include jc-flex-center;
     @include ai-flex-center;
     background: #fff;
-    color: #333;
+    color: $eventTableTextColor;
     font-family: $baseFontFamily;
     border: none;
     line-height: 1;

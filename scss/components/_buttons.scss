@@ -6,7 +6,7 @@
   @include ai-flex-center();
   @include jc-flex-center();
   line-height: 1;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 0.9rem;
   text-transform: uppercase;
   white-space: nowrap;
@@ -26,7 +26,6 @@
 
   &--sm{
     height: $gap;
-    padding-top: 2px;
     padding-left: 17px;
     padding-right: 17px;
     font-size: 0.8rem /// 16px
@@ -34,14 +33,22 @@
 
   &--md{
     height: 2 * $gap;
-    min-width: 315px;
+    min-width: 260px;
+
+    @include respond-to(lg){
+      min-width: 315px;
+    }
   }
 
   &--lg{
     height: 2 * $gap;
     font-size: 0.9rem; /// 18px
-    min-width: 387px;
+    min-width: 289px;
     border-radius: $radius + 4;
+
+    @include respond-to(lg){
+      min-width: 387px;
+    }
   }
 
   &--white{

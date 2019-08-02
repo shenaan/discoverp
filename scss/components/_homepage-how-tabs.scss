@@ -1,15 +1,28 @@
 .how-tabs__wrap{
   background-color: #edcd62;
   @include transition-04;
+
+  @include respond-to(md){
+    top: -166px;
+    position: relative;
+  }
 }
 
 .how-tab__item{
-  display: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  @include transition-04;
+  background-color: #edcd62;
+  position: relative;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  @include transition(0.1s opacity ease-in-out);
+  @include box-shadow;
   &.is-active{
-    display: block;
+    height: auto;
+    overflow: visible;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 1;
   }
 }
 
@@ -21,12 +34,29 @@
   border-top: 1px solid #fff;
   padding: 0.5 * $gap 0;
   @include box-shadow-top;
+  @include transform-origin(top);
+  @include transition-03;
+  &.is-hidden{
+    opacity: 0;
+    @include transform-scale(1, 0);
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.how-tab__footer-btn{
+  text-align: center;
 }
 
 .how-tab__item-row{
   @include display-flex;
+  @include flex-wrap;
   margin: 0 -9px;
   position: relative;
+
+  @include respond-to(md){
+    @include flex-nowrap;
+  }
 }
 
 .how-tab__item-col{
@@ -35,13 +65,22 @@
 }
 
 .how-tab__item-col--1{
-  width: 33.33%;
-  max-width: 33.33%;
+  width: 100%;
+  max-width: 100%;
+
+  @include respond-to(md){
+    width: 33.33%;
+    max-width: 33.33%;
+  }
 }
 
 .how-tab__item-col--2{
-  width: 66.66%;
-  max-width: 66.66%;
+  width: 100%;
+  max-width: 100%;
+  @include respond-to(md){
+    width: 66.66%;
+    max-width: 66.66%;
+  }
 }
 
 .how-tab__item-col--3{

@@ -2,7 +2,13 @@
   z-index: 10;
   position: relative;
   color: #333;
+  max-width: 100%;
+
   a{
     color: #333;
+  }
+  @include respond-to(md){
+    margin-bottom: -166px;
+    //overflow-x: hidden;
   }
 }

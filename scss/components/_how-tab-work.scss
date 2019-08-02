@@ -17,12 +17,7 @@
 
 .tab-work__list-item {
   text-align: center;
-  padding: 0 10px;
-
-  &:nth-of-type(2){
-    border-left: 2px dotted #333;
-    border-right: 2px dotted #333;
-  }
+  padding: 5px 10px 0;
 
   h2 {
     margin-bottom: 0.5 * $gap;
@@ -31,6 +26,13 @@
   p {
     max-width: 226px;
     @include center;
+  }
+
+  @include respond-to(md){
+    &:nth-of-type(2){
+      border-left: 2px dotted #333;
+      border-right: 2px dotted #333;
+    }
   }
 }
 
@@ -57,6 +59,10 @@
   }
 }
 
-.tab-work__btn{
-  text-align: center;
+.tab-work__slider{
+  display: block;
+  width: 100%;
+  .slick-track{
+    //width: 100% !important;
+  }
 }

@@ -1,0 +1,168 @@
+$tabBuildTextColor: #333;
+
+.tab-build__events{
+  @include transform-origin(right);
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  will-change: auto;
+  //height: 0;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  top: $gap * 1.5;
+  
+  &.is-visible{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    top: 0;
+    //height: auto;
+  }
+}
+
+.tab-build__events-table{
+  background-color: #fff;
+  border-radius: $radius;
+  display: none;
+  &.is-active{
+    display: block;
+  }
+}
+
+.tab-build__events-header{
+  min-height: 2 * $gap;
+  padding: 22px 27px;
+  @include display-flex;
+  @include flex-wrap;
+  @include ai-flex-center;
+  border-bottom: 1px dotted $tabBuildTextColor;
+
+  p{
+    font-weight: 600;
+    font-size: 1.5rem;  ///30px
+
+    span{
+      font-weight: normal;
+      display: block;
+      margin-top: 14px;
+    }
+  }
+  @include respond-to(md){
+    padding-top: 0;
+    padding-bottom: 0;
+    @include flex-nowrap;
+    p{
+      span{
+        display: inline-block;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.tab-build__events-body{
+  color: $tabBuildTextColor;
+}
+
+.tab-build__events-row{
+  min-height: 2 * $gap;
+  padding-left: 27px;
+  padding-right: 27px;
+  @include display-flex;
+  @include ai-flex-center;
+  
+  &--colored{
+    background-color: #fdf9ed;
+    min-height: 72px;
+  }
+  &--soldout{
+    p{
+      color: #706f6b;
+    }
+  }
+
+  p{
+    font-size: 0.8rem;
+    width: 100%;
+    span{
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 5px;
+    }
+  }
+  @include respond-to(sm){
+    p{
+      font-size: 1rem;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      span{
+        margin-right: 35px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.tab-build__events-name{
+  font-weight: 600;
+  width: 47%;
+  padding-right: 0px;
+
+  @include respond-to(xs){
+    width: 49%;
+    padding-right: 15px;
+  }
+  @include respond-to(sm){
+    width: auto;
+  }
+}
+
+.tab-build-events-schedule--wrap{
+  width: 47%;
+  @include respond-to(sm){
+    width: auto;
+  }
+}
+
+.tab-build__events-schedule{
+  background-color: $yellowTabLink;
+  border-radius: 12px;
+  min-width: 74px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 2px;
+
+  @include respond-to(sm){
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    min-width: 10px;
+    min-height: 10px;
+    text-align: left;
+    line-height: normal;
+    margin-bottom: 0;
+  }
+}
+
+.tab-build__events-label{
+  display: inline-block;
+  background-color: #fff;
+  font-size: 0.6rem;
+  padding: 9px 11px;
+  line-height: 1;
+  border-radius: 12px;
+  margin-left: -5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  vertical-align: middle !important;
+
+  @include respond-to(sm){
+    margin-left: -30px;
+    background-color: $yellowTabLink;
+    padding: 5px 9px;
+    border-right: 9px;
+  }
+}
