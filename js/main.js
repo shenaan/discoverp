@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var menuItem, exhibition, search;  /// for menu Animation
+    var menuItem, exhibition, search, book;  /// for menu Animation
     var controller = new ScrollMagic.Controller();
 
     function isMobile() {
@@ -23,7 +23,7 @@ $(document).ready(function () {
     ///  HEADER
     //reseting header
     function headerReset() {
-        // $('body, html').removeClass('no-scroll');
+        $('body, html').removeClass('no-scroll');
         $('.page-menu__overlay').removeClass('is-visible');
         $('.page-menu').removeClass('is-active');
     }
@@ -31,6 +31,7 @@ $(document).ready(function () {
     menuItem = $('.page-nav__list-item');
     exhibition = $('.page-menu__exhibition');
     search = $('.page-menu__search');
+    book = $('.page-menu__book');
 
     function menuOpenAnimation() {
         var tl = new TimelineMax({
@@ -42,8 +43,16 @@ $(document).ready(function () {
             var $this = $(this);
             tl.staggerFromTo($this, 0.195, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.03');
         });
-        tl.staggerFromTo(exhibition, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
-        tl.staggerFromTo(search, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
+        if (isMobile()) {
+            tl.staggerFromTo(search, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05')
+                .staggerFromTo(book, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05')
+                .staggerFromTo(exhibition, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
+        } else {
+            tl.staggerFromTo(book, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05')
+                .staggerFromTo(exhibition, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05')
+                .staggerFromTo(search, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
+        }
+
         $('.page-menu').addClass('was-animated');
     }
 
@@ -58,12 +67,13 @@ $(document).ready(function () {
         });
         tl.set(exhibition, {x: 0, opacity: 1});
         tl.set(search, {x: 0, opacity: 1});
+        tl.set(book, {x: 0, opacity: 1});
         $('.page-menu').removeClass('was-animated');
     }
 
     $('.header__hamburger').on('click', function (e) {
         e.stopPropagation();
-        // $('body, html').toggleClass('no-scroll');
+        $('body, html').toggleClass('no-scroll');
         setTimeout(function () {
             $('.page-menu__overlay').toggleClass('is-visible');
             $('.page-menu').toggleClass('is-active');
@@ -82,6 +92,21 @@ $(document).ready(function () {
             if (!$(e.target).closest('.page-menu.is-active').length) {
                 headerReset();
                 menuResetAnimation();
+            }
+        }
+    });
+
+    $('.page-nav__list-link').on('click', function (e) {
+        if (isMobile()) {
+            e.preventDefault();
+            $('.page-nav__dropdown').addClass('is-hidden').slideUp();
+            $(this).parent().siblings('.page-nav__list-item').removeClass('is-active');
+            $(this).parent().toggleClass('is-active');
+
+            if ($(this).parent().hasClass('is-active')) {
+                $(this).parent().find('.page-nav__dropdown').slideDown().removeClass('is-hidden');
+            } else {
+                $(this).parent().find('.page-nav__dropdown').addClass('is-hidden').slideUp();
             }
         }
     });
@@ -145,10 +170,14 @@ $(document).ready(function () {
         if (colDefault.hasClass('was-animated')) {
             return;
         } else {
-            colDefault.addClass('was-animated').addClass('is-removed');
+            colDefault.addClass('was-animated').addClass('is-removed').addClass('is-terminated');
             calendar.addClass('was-animated');
             tabFooter.removeClass('is-hidden');
-            tabEvents.addClass('is-visible');
+            tabEvents.addClass('is-added');
+            setTimeout(function () {
+                tabEvents.addClass('is-visible');
+            }, 0)
+
         }
     }
 
