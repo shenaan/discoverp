@@ -37,18 +37,103 @@
                     <i class="icon icon-cross"></i>
                 </button>
             </div>
-            <nav class="page-nav">
+            <nav class="page-nav order-1">
                 <ul class="page-nav__list">
-                    <li class="page-nav__list-item page-nav__list-item--lg"><a href="#" class="page-nav__list-link">Things
-                        to see & do</a></li>
-                    <li class="page-nav__list-item page-nav__list-item--lg"><a href="#" class="page-nav__list-link">Plan
-                        your visit</a></li>
-                    <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Schools & Nurseries</a></li>
-                    <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Who we are</a></li>
-                    <li class="page-nav__list-item"><a href="#" class="page-nav__list-link">Support us</a></li>
+                    <li class="page-nav__list-item page-nav__list-item--lg">
+                        <a href="#" class="page-nav__list-link">Things to see & do
+                          <span class="page-nav__list-icon"></span>
+                        </a>
+                        <ul class="page-nav__dropdown">
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Opening times & prices</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Getting here</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Access</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Cafe & bookshop</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Birthday parties</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Venue hire</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="page-nav__list-item page-nav__list-item--lg">
+                        <a href="#" class="page-nav__list-link">Plan your visit
+                            <span class="page-nav__list-icon"></span>
+                        </a>
+                        <ul class="page-nav__dropdown">
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 03</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 04</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="page-nav__list-item">
+                        <a href="#" class="page-nav__list-link">Schools & Nurseries
+                            <span class="page-nav__list-icon"></span>
+                        </a>
+                        <ul class="page-nav__dropdown">
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 03</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="page-nav__list-item">
+                        <a href="#" class="page-nav__list-link">Who we are
+                            <span class="page-nav__list-icon"></span>
+                        </a>
+                        <ul class="page-nav__dropdown">
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="page-nav__list-item">
+                        <a href="#" class="page-nav__list-link">Support us
+                            <span class="page-nav__list-icon"></span>
+                        </a>
+                        <ul class="page-nav__dropdown">
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+                            </li>
+                            <li class="page-nav__dropdown-item">
+                                <a href="#" class="page-nav__dropdown-link">Item 03</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <div class="page-menu__exhibition">
+            <div class="page-menu__book order-2 show-in-mob">
+                <a href="#" class="btn btn--white btn--no-border page-menu__book-btn">Book my tickets</a>
+            </div>
+            <div class="page-menu__exhibition order-2 order-lg-2">
                 <div class="popup-exhibition__content">
                     <div class="popup-exhibition__content-inner">
                         <div class="p--small popup-exhibition__title">
@@ -64,7 +149,7 @@
                     <i class="icon-arrow-right"></i>
                 </a>
             </div>
-            <div class="page-menu__search">
+            <div class="page-menu__search order-1 order-lg-3">
                 <form action="#" class="search-form">
                     <div class="menu-search__input-wrap">
                         <input type="search" class="search__input">
@@ -174,7 +259,9 @@
                     <div class="how-tab__item-inner">
                         <div class="how-tab__item-row">
                             <div class="how-tab__item-col how-tab__item-col--2">
-                                <div class="tab-directions__map" id="tab-direction__map"></div>
+                                <div class="tab-directions__map-wrap">
+                                    <div class="tab-directions__map" id="tab-direction__map"></div>
+                                </div>
                             </div>
                             <div class="how-tab__item-col how-tab__item-col--1">
                                 <div class="tab-directions__info">
