@@ -40,10 +40,10 @@ $(document).ready(function () {
         });
         menuItem.each(function (i, el) {
             var $this = $(this);
-            tl.staggerFromTo($this, 0.25, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.03');
+            tl.staggerFromTo($this, 0.195, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.03');
         });
-        tl.staggerFromTo(exhibition, 0.2, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
-        tl.staggerFromTo(search, 0.2, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
+        tl.staggerFromTo(exhibition, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
+        tl.staggerFromTo(search, 0.19, {x: 100, opacity: 0}, {x: 0, opacity: 1}, '-=0.05');
         $('.page-menu').addClass('was-animated');
     }
 
@@ -92,11 +92,25 @@ $(document).ready(function () {
         e.preventDefault();
         var $this = $(this),
             href = $this.attr('href'),
-            parent = $this.parent();
-        parent.siblings('.how-tab__link-item').removeClass('is-active');
-        parent.addClass('is-active');
-        $('.how-tab__item').removeClass('is-active');
-        $this.parents('.homepage-how').find('.how-tab__item' + href).addClass('is-active');
+            parent = $this.parent(),
+            tab = $('.how-tab__item');
+
+        if (isMobile()) {
+            if (parent.hasClass('is-active')) {
+                parent.removeClass('is-active');
+                tab.removeClass('is-active');
+            } else {
+                parent.siblings('.how-tab__link-item').removeClass('is-active');
+                parent.addClass('is-active');
+                tab.removeClass('is-active');
+                $this.parents('.homepage-how').find('.how-tab__item' + href).addClass('is-active');
+            }
+        } else {
+            parent.siblings('.how-tab__link-item').removeClass('is-active');
+            parent.addClass('is-active');
+            tab.removeClass('is-active');
+            $this.parents('.homepage-how').find('.how-tab__item' + href).addClass('is-active');
+        }
     });
 
     /// WORK tab
@@ -109,30 +123,35 @@ $(document).ready(function () {
         adaptiveHeight: false,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1023,
                 settings:
                     {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: false,
-                    dots: false,
-                    arrows: false
-                }
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: false,
+                        dots: false,
+                        arrows: false
+                    }
             },
         ]
     });
 
     /// BUILD tab
     function buildTabAnimation() {
-        var colDefault = $('.tab-build__default');
+        var colDefault = $('.tab-build__default'),
+            calendar = $('.page__calendar__wrap'),
+            tabFooter = $('.how-tab__item-footer'),
+            tabEvents = $('.tab-build__events');
         if (colDefault.hasClass('was-animated')) {
             return;
         } else {
             colDefault.addClass('was-animated').addClass('is-removed');
-            $('.how-tab__item-footer').removeClass('is-hidden');
-            $('.tab-build__events').addClass('is-visible');
+            calendar.addClass('was-animated');
+            tabFooter.removeClass('is-hidden');
+            tabEvents.addClass('is-visible');
         }
     }
+
     /// DATEPICKER jquery ui
     $(document).on('change', '.page__calendar', function () {
         var date = $(this).val();  ///mm-dd-yyyy
@@ -140,10 +159,10 @@ $(document).ready(function () {
         var tableActive = $('.tab-build__events').find('.tab-build__events-table[data-date="' + date + '"]');
         var tableDefault = $('.tab-build__events-table.is-default');
         buildTabAnimation();
-        if (tableActive.length === 0){
+        if (tableActive.length === 0) {
             table.removeClass('is-active');
             tableDefault.addClass('is-active');
-        }else{
+        } else {
             table.removeClass('is-active');
             tableDefault.removeClass('is-active');
             tableActive.addClass('is-active');
