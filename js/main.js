@@ -251,6 +251,7 @@ $(document).ready(function () {
     mobileFirst: true,
     dots: false,
     arrows: true,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: false,
@@ -319,8 +320,6 @@ $(document).ready(function () {
     mobileFirst: true,
     centerMode: true,
     variableWidth: true,
-    // slidesToShow: 3,
-    // slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1023,
@@ -343,8 +342,6 @@ $(document).ready(function () {
       return exploreSlider.slick(exploreSliderSettings);
     }
   }
-
-  //End Homepage Explore slider
 
   //Discover section caption text
   $('.discover__img').on('click', function () {
@@ -448,7 +445,6 @@ $(document).ready(function () {
 
   //function calls
   exploreSliderInit();
-
 
   /* Trigger resize once */
   $(window).resize(function () {
