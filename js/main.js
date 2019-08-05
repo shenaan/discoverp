@@ -5,8 +5,9 @@ if (window.objectFitImages) {
 }
 
 $(document).ready(function () {
-  var menuItem, exhibition, search, book; /// for menu Animation
+  var menuItem, exhibition, search, book; /// for menu animation
   let exploreSlider, exploreSliderSettings;  //explore homepage carousel
+  let generalSliderSettings, discoverSliderSettings; //for general template page slider and homepage 'discover worlds slider;
   let controller = new ScrollMagic.Controller();
   let resizeId; // for resize timer
 
@@ -367,8 +368,49 @@ $(document).ready(function () {
   });
 
   /* Gallery slider */
-  $('.gallery-slider__container')
-    .on('afterChange init', function (event, slick, direction) {
+  function changeCaption(dataCaption){  //for slider with caption change
+    let caption = $('.worlds__caption'),
+      captionActive = $('.worlds__caption-wrap').find('.worlds__caption' + '.' + dataCaption);
+
+    caption.hide();
+    captionActive.show();
+  }
+
+  generalSliderSettings = {
+    infinite: false,
+    prevArrow: $('.gallery-slider').find('.arrow-slider--prev'),
+    nextArrow: $('.gallery-slider').find('.arrow-slider--next'),
+    mobileFirst: true,
+    speed: 150,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          centerMode: true,
+          variableWidth: true
+        }
+      }
+    ]
+  };
+  discoverSliderSettings = {
+    infinite: false,
+    prevArrow: $('.gallery-slider').find('.arrow-slider--prev'),
+    nextArrow: $('.gallery-slider').find('.arrow-slider--next'),
+    mobileFirst: true,
+    speed: 150,
+    responsive: [
+      {
+        breakpoint: 320,
+        settings: {
+          centerMode: true,
+          variableWidth: true
+        }
+      }
+    ]
+  };
+
+  function  handleSliderAnimation(carousel){
+    $(carousel).on('afterChange init', function (event, slick, direction, index, slider, slide) {
       // remove all prev/next
       slick.$slides.removeClass('slick-prev slick-next');
 
@@ -384,34 +426,23 @@ $(document).ready(function () {
       }
 
       //for gallery slider with caption change
-      let attr =  $('.slick-current').attr('data-caption');
-
+      let attr =  $(this).find('.slick-current').attr('data-caption');
       if(typeof attr !== typeof undefined && attr !== false){
-        console.log(attr)
+        changeCaption(attr);
       }
     })
-    .on('beforeChange', function (event, slick) {
-      // optional, but cleaner maybe
-      // remove all prev/next
-      slick.$slides.removeClass('slick-prev slick-next');
-    })
-    .slick({
-      infinite: false,
-      prevArrow: $('.gallery-slider').find('.arrow-slider--prev'),
-      nextArrow: $('.gallery-slider').find('.arrow-slider--next'),
-      mobileFirst: true,
-      speed: 150,
-      responsive: [
-        {
-          breakpoint: 767,
-          settings: {
-            centerMode: true,
-            variableWidth: true
-          }
-        }
-      ]
-    });
+      .on('beforeChange', function (event, slick) {
+        // optional, but cleaner maybe
+        // remove all prev/next
+        slick.$slides.removeClass('slick-prev slick-next');
+      });
+  }
 
+  handleSliderAnimation('.gallery-slider__container');
+  handleSliderAnimation('.worlds-slider__container');
+
+  $('.gallery-slider__container').slick(generalSliderSettings);
+  $('.worlds-slider__container').slick(discoverSliderSettings);
   /* End general page */
 
 
@@ -425,8 +456,7 @@ $(document).ready(function () {
     resizeId = setTimeout(doneResizing, 500);
   });
 
-  function doneResizing() {
-  }
+  function doneResizing() {}
 
   $(window).resize(function () {
     headerReset();
