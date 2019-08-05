@@ -27,18 +27,6 @@
     transform: translate(50%, -10%) scale(0.7) rotate(- 3.5deg)
   }
 
-  .arrow-slider{
-    @include square(90px);
-    background-color: #fff;
-  }
-
-  .arrow-slider--prev{
-    display: none;
-  }
-  .arrow-slider--next{
-    display: none;
-  }
-
   @include respond-to(md){
     .gallery-slider__item {
       max-width: 907px;
@@ -47,12 +35,39 @@
     .gallery-slider__img-wrap {
       height: 541px;
     }
+  }
+}
 
+.worlds-slider{
+  .arrow-slider{
+    display: none !important;
+  }
+
+  @include respond-to(md){
+    .arrow-slider{
+      display: block !important;
+    }
     .arrow-slider--prev{
-      background: #fff url("#{$imgUrl}arrow-left.png")no-repeat center /42px 34px;
+      left: 7%;
     }
     .arrow-slider--next{
-      background: #fff url("#{$imgUrl}arrow-right.png")no-repeat center /42px 34px;
+      right: 7%;
+    }
+  }
+  @include respond-to(lg){
+    .arrow-slider--prev{
+      left: 18%;
+    }
+    .arrow-slider--next{
+      right: 18%;
+    }
+  }
+  @include respond-to(xl){
+    .arrow-slider--prev{
+      left: 19%;
+    }
+    .arrow-slider--next{
+      right: 19%;
     }
   }
 }

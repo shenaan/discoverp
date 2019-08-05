@@ -1,9 +1,9 @@
 /*We're social section*/
 
 .social{
-  padding-bottom: 13px;
   @include respond-to(md){
     margin-bottom: 4 * $gap;
+    padding-bottom: 13px;
   }
 }
 
@@ -80,7 +80,8 @@
   @include respond-to(md){
     width: 58%;
     max-width: 58%;
-    height: inherit;
+    min-height: inherit;
+    height: auto;
     margin-left: 0;
     margin-right: 0;
   }

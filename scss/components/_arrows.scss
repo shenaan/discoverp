@@ -35,11 +35,27 @@
   box-shadow: 2px 2px 4px 0 rgba(#000, 0.2);
   cursor: pointer;
 
+  &--lg {
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    background-size: 42px auto;
+  }
+
   &--prev {
     background-image: url('../img/arrow-left.png');
   }
 
   &--next {
     background-image: url('../img/arrow-right.png');
+  }
+
+  &--dark {
+    &.arrow-slider--prev {
+      background-image: url('#{$imgUrl}arrow-left-dark.png');
+    }
+    &.arrow-slider--next {
+      background-image: url('#{$imgUrl}arrow-right-dark.png');
+    }
   }
 }
