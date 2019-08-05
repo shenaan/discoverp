@@ -1,7 +1,8 @@
 .popup-exhibition{
   position: absolute;
   @include transition-04;
-  top: 420px;
+  //top: 420px;
+  top: 45vh;
   right: -60px;
   opacity: 0;
   visibility: hidden;
@@ -63,4 +64,9 @@
   left: 146px;
   z-index: 2;
   @include box-shadow();
+  .icon{
+    display: block;
+    @include size(33px, 28px);
+    background: url('#{$imgUrl}arrow-right-dark-straight.png')no-repeat center /33px 28px;
+  }
 }

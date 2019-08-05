@@ -25,7 +25,7 @@
   }
 
   &--sm {
-    height: $gap;
+    height: 35px;
     padding-left: 17px;
     padding-right: 17px;
     font-size: 0.8rem; /// 16px
@@ -37,7 +37,7 @@
     min-width: 260px;
 
     @include respond-to(lg) {
-      min-width: 315px;
+      min-width: 312px;
     }
   }
 

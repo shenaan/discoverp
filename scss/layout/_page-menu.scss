@@ -78,6 +78,7 @@
     box-shadow: none;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
 
     .header__hamburger {
       @include square(63px);
@@ -93,7 +94,7 @@
 .page-nav {
   @include respond-to(md) {
     padding: 0 0 2*$gap 90px;
-    padding-bottom: calc(64px - 6px); ///2 * $gap;
+    //padding-bottom: calc(64px - 6px); ///2 * $gap;
   }
 }
 

@@ -1,7 +1,6 @@
 .general-template {
   padding-top: 2 * $gap;
   padding-bottom: 2 * $gap;
-  background-color: $pageColorTint;
 
   .main-container {
     @include respond-to(md) {

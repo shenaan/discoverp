@@ -4,6 +4,7 @@
   background-color: $textColor;
   color: #fff;
   overflow: hidden;
+  @include box-shadow;
   @include respond-to(md){
     padding-top: 2 * $gap;
     overflow: visible;

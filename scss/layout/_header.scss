@@ -58,10 +58,13 @@
   }
 }
 
-.header__book {
+.header__book.btn{
   font-size: 16px;
   margin-left: 7px;
   @include box-shadow();
+  border-radius: 16px;
+  width: 115px;
+  height: 35px;
 
   @include respond-to(md){
     display: -webkit-inline-box !important;

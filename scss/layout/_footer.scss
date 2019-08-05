@@ -1,9 +1,6 @@
 .footer {
-  padding-top: 40px;
-  background-color: $redColor;
   @include respond-to(md) {
     padding-top: $gap * 2;
-    margin-top: $gap * 2;
   }
 }
 
@@ -11,7 +8,7 @@
   display: none;
   position: absolute;
   top: -127px;
-  left: 0;
+  left: 20px;
   width: 254px;
   img {
     width: 100%;
@@ -22,6 +19,8 @@
 }
 
 .footer__inner {
+  padding-top: 40px;
+  background-color: $redColor;
   .main-container {
     position: relative;
     display: flex;
@@ -29,6 +28,7 @@
   }
 
   @include respond-to(md) {
+    padding-top: $gap * 2;
     border-bottom: 1px dotted #fff;
     padding-bottom: 40px;
     .main-container {
@@ -169,7 +169,7 @@
   color: #fff;
   background-color: $textColor;
   border: 2px solid #fff;
-  border-radius: $radius;
+  border-radius: 13px;
   padding: 26px 15px 66px 25px;
   @include box-shadow;
   position: relative;
@@ -271,6 +271,7 @@
 
 /*FOOTER PARNTERS*/
 .footer-partners{
+  background-color: $redColor;
   padding-bottom: 45px;
 
   @include respond-to(md){

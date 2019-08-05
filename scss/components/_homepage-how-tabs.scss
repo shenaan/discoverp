@@ -48,6 +48,12 @@
   text-align: center;
   .btn{
     color: #333;
+    height: 71px;
+    min-width: 289px;
+    border-radius: $radius--xl + 1;
+  }
+  @include respond-to(md){
+    min-width: 387px;
   }
 }
 

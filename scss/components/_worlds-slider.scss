@@ -46,6 +46,7 @@
   @include respond-to(md){
     .arrow-slider{
       display: block !important;
+      @include box-shadow-btn;
     }
     .arrow-slider--prev{
       left: 7%;

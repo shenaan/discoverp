@@ -49,6 +49,9 @@
   }
   @include respond-to(md){
     padding-bottom: 0;
+    &.was-animated{
+      padding-bottom: 0px;
+    }
   }
 }
 

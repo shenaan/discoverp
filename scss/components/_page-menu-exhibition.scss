@@ -25,6 +25,7 @@
   }
 
   @include respond-to(md){
+    margin-bottom: 90px;
     .popup-exhibition__content{
       @include rotate(0);
       width: 302px;
@@ -40,10 +41,11 @@
       max-width: 175px;
     }
     .popup-exhibition__img{
+      @include size(178px, 182px);
       @include display-flex;
       position: absolute;
-      top: 27px;
-      left: 36px;
+      top: 36px;
+      left: 17px;
     }
     .popup-exhibition__link{
       bottom: -36px;

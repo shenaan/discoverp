@@ -21,6 +21,13 @@
   position: relative;
   padding-bottom: $gap;
   padding-top: 130px;
+  @include respond-to(md) {
+    padding-top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 .tab-directions__info-inner{
@@ -47,7 +54,8 @@
   width: -moz-fit-content;
   width: fit-content;
   @include center;
-  border-radius: $radius--xl;
+  border-radius: $radius--xl + 1;
+  height: 71px;
 }
 
 .tab-directions__info-content{
