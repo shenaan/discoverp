@@ -1,4 +1,4 @@
-.speech-bubble{
+.speech-bubble {
   -webkit-background-size: 100% auto;
   background-size: 100% auto;
   background-position: center;
@@ -9,22 +9,28 @@
   @include display-flex;
   @include ai-flex-center;
 
-  &--right{
+  &--right {
     background-image: url("#{$imgUrl}bubble-right.png");
-    p{
+    p {
       left: -9px;
     }
   }
 
-  &--left{
+  &--left {
     background-image: url("#{$imgUrl}bubble-left.png");
-    p{
+    p {
       right: -5px;
     }
   }
-  p{
+  &--left-wide {
+    background-image: url("#{$imgUrl}bubble-left-wide.png");
+    p {
+      left: 7px;
+    }
+  }
+
+  p {
     width: 93px;
-    word-break: break-all;
     @include center;
     text-align: center;
     position: relative;

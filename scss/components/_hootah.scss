@@ -3,8 +3,17 @@
   &--sm{
     width: 81px;
   }
+  &--sm--long{
+    width: 100px;
+  }
   &--md{
     width: 142px;
+  }
+  &--lg{
+    width: 330px;
+  }
+  &--double{
+    width: 200px;
   }
   &--right{
     img{
@@ -20,8 +29,17 @@
     &--sm{
       width: 81px;
     }
+    &--sm--long{
+      width: 117px;
+    }
     &--md{
       width: 182px;
+    }
+    &--lg{
+      width: 370px;
+    }
+    &--double{
+      width: 240px;
     }
   }
 }

@@ -1,0 +1,54 @@
+.page-links {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 7px 7px 10px rgba(#000, 0.15);
+
+  &__list {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  li {
+    position: relative;
+    margin: 0 10px;
+    padding: $gap-mob 0;
+
+    @include respond-to(sm) {
+      padding: $gap 0;
+
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+
+    @include respond-to(md) {
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+
+  li.current-menu-item a {
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 12px;
+      border-radius: 5px;
+      background-color: $textColor;
+      transform: translateY(50%);
+      content: '';
+    }
+  }
+
+  a {
+    color: $textDark;
+  }
+}

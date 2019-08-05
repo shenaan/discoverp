@@ -1,57 +1,57 @@
-@import "abstracts/custom-variables";
-@import "abstracts/mixins";
+@import 'abstracts/custom-variables';
+@import 'abstracts/mixins';
 
-@import "vendors/slick";
-@import "vendors/normalize";
-@import "vendors/theme";
+@import 'vendors/slick';
+@import 'vendors/normalize';
 
-@import "base/custom-reset";
-@import "base/fonts";
-@import "base/icon-fonts";
-@import "base/typography";
-@import "base/animations";
-@import "base/helpers";
+@import 'base/custom-reset';
+@import 'base/fonts';
+@import 'base/icon-fonts';
+@import 'base/typography';
+@import 'base/animations';
+@import 'base/helpers';
 
-@import "layout/containers";
-@import "layout/grids";
-@import "layout/general-layout-styles";
-@import "layout/header";
-@import "layout/header";
-@import "layout/footer";
-@import "layout/homepage-hero";
-@import "layout/page-menu";
-@import "layout/homepage-how";
+@import 'layout/containers';
+@import 'layout/grids';
+@import 'layout/general-layout-styles';
+@import 'layout/header';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/homepage-hero';
+@import 'layout/page-menu';
+@import 'layout/homepage-how';
+@import 'layout/discover';
+@import 'layout/explore-section';
+@import 'layout/worlds-section';
+@import 'layout/social';
+@import 'layout/general-template';
 
-@import "components/img-fallback";
-@import "components/_lazy-load";
-@import "components/carousel";
-@import "components/buttons";
-@import "components/form";
-@import "components/video-bg";
-@import "components/arrows";
-@import "components/calendar-overwrite";
-@import "components/exhibition-popup";
-@import "components/page-menu-exhibition";
-@import "components/page-menu-search";
-@import "components/page-nav-dropdown";
-@import "components/homepage-how-tab-links";
-@import "components/homepage-how-tabs";
-@import "components/how-tab-build";
-@import "components/how-tab-build-events";
-@import "components/how-tab-work";
-@import "components/how-tab-directions";
-@import "components/hootah";
-@import "components/speech-bubble";
-
-
-
-
-
-
-
-
-
-
-
-
-
+@import 'components/img-fallback';
+@import 'components/_lazy-load';
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/video-bg';
+@import 'components/arrows';
+@import 'components/calendar-overwrite';
+@import 'components/exhibition-popup';
+@import 'components/page-menu-exhibition';
+@import 'components/page-menu-search';
+@import 'components/page-nav-dropdown';
+@import 'components/homepage-how-tab-links';
+@import 'components/homepage-how-tabs';
+@import 'components/how-tab-build';
+@import 'components/how-tab-build-events';
+@import 'components/how-tab-work';
+@import 'components/how-tab-directions';
+@import 'components/hootah';
+@import 'components/speech-bubble';
+@import 'components/page-links';
+@import 'components/single-article';
+@import 'components/quote-slider';
+@import 'components/gallery-slider';
+@import 'components/support';
+@import 'components/sidebar-card';
+@import 'components/explore-section-carousel';
+@import 'components/explore-list';
+@import 'components/worlds-slider';

@@ -1,0 +1,219 @@
+.discover {
+  @include respond-to(md) {
+    padding: 2 * $gap 0;
+  }
+
+}
+
+.discover__inner {
+  @include box-shadow;
+  margin: 0 -20px;
+  @include respond-to(md){
+    border-radius: $radius;
+    margin: 0;
+  }
+}
+
+.discover__inner-content {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #fff;
+  border-bottom: none;
+  background-color: $redColor;
+  color: #fff;
+  @include respond-to(md) {
+    flex-wrap: nowrap;
+    min-height: 495px;
+    @include border-radius-top($radius);
+  }
+}
+
+.discover__title {
+  padding: 40px 20px 20px;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  .h1 {
+    margin-bottom: 0.5 * $gap;
+  }
+  @include respond-to(md) {
+    width: 42%;
+    max-width: 42%;
+    padding: $gap * 1.5 50px 0;
+    height: inherit;
+
+    .h1, p {
+      max-width: 370px;
+    }
+  }
+}
+
+.discover__hootah{
+  bottom: -8px;
+  right: 47px;
+}
+
+.discover__btn-wrap {
+  margin-top: $gap;
+}
+
+.btn.discover__btn {
+  min-width: 279px;
+  height: 61px;
+  background-color: $redColorTint;
+  color: $redColor;
+  border-radius: $radius--lg - 1;
+  border: 1px solid #fff;
+  @include box-shadow-btn;
+}
+
+.discover__images {
+  height: 352px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  @include center;
+  @include respond-to(md) {
+    width: 58%;
+    max-width: 58%;
+    height: inherit;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.discover__img {
+  position: absolute;
+  overflow: hidden;
+  @include box-shadow;
+  background-color: $redColorTint;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    border: 10px solid;
+    cursor: pointer;
+  }
+
+  img {
+    @include imageCover;
+    @include transition-04;
+  }
+
+  &--top{
+    z-index: 10 !important;
+  }
+
+  @include on-event() {
+    img {
+      @include hover-scale;
+    }
+  }
+  // from top right to left
+  &--01 {
+    @include size(169px, 219px);
+    z-index: 4;
+    transform: rotate(6deg);
+    left: 26%;
+    top: 84px;
+  }
+  &--02 {
+    @include size(164px, 113px);
+    z-index: 3;
+    transform: rotate(8deg);
+    right: 9px;
+    bottom: 76px;
+  }
+  &--03 {
+    @include size(138px, 95px);
+    z-index: 2;
+    right: 26px;
+    top: 110px;
+    transform: rotate(-8deg);
+  }
+  &--04 {
+    @include size(198px, 136px);
+    z-index: 0;
+    transform: rotate(11deg);
+    top: 40px;
+    left: 14px
+  }
+  &--05 {
+    @include size(122px, 100px);
+    z-index: 1;
+    transform: rotate(-1deg);
+    bottom: 107px;
+    left: 29px;
+  }
+
+  @include respond-to(md) {
+    &--01 {
+      @include size(336px, 436px);
+      left: 16%;
+      top: 84px;
+    }
+    &--02 {
+      @include size(327px, 224px);
+      right: 0px;
+      bottom: 40px;
+    }
+    &--03 {
+      @include size(275px, 190px);
+      right: 22px;
+      top: 144px;
+    }
+    &--04 {
+      @include size(393px, 270px);
+      top: 9px;
+      left: 0;
+    }
+    &--05 {
+      @include size(243px, 199px);
+      bottom: 74px;
+      left: 21px;
+    }
+  }
+  @include respond-to(lg){
+    &--02 {
+      right: -7px;
+    }
+  }
+}
+
+.discover__inner-caption {
+  border: 1px solid #fff;
+  border-top: none;
+  padding: 20px;
+  background-color: $redColorTint;
+  color: $redColor;
+  p{
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+  }
+  @include respond-to(md) {
+    padding: $gap 50px;
+    @include border-radius-bottom($radius);
+    p{
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+  }
+}
+
+.discover__caption {
+  display: none;
+
+  &-default {
+    display: block;
+  }
+
+  @include respond-to(md) {
+    max-width: 580px;
+  }
+}

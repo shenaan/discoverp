@@ -1,0 +1,334 @@
+/*Explore events and exhibition section*/
+//Color schemes for items below
+
+$explorePadding: 16px;
+
+.explore-list__wrap {
+  margin:  0 -20px;
+  @include respond-to(md){
+    margin: 0;
+    margin-bottom: -(2 * $gap);
+  }
+}
+
+.explore-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .slick-list{
+    height: auto;
+  }
+
+  @include respond-to(md){
+    padding-bottom: 0;
+    margin: 0 -15px;
+  }
+}
+
+.explore-list__item {
+  padding: 0 4px 40px;
+
+  &--lg {
+    .explore-list__item-btn-wrap{
+      .btn{
+        min-width: 217px;
+      }
+    }
+  }
+
+  @include respond-to(md) {
+    opacity: 1 !important;
+    max-width: none;
+    padding: 0 15px 0px;
+    color: $textDark !important;
+    margin-bottom: 2 * $gap + 24px;
+    &--sm {
+      width: 25%;
+      max-width: 25%;
+    }
+
+    &--lg {
+      width: 50%;
+      max-width: 50%;
+      .explore-list__item-label {
+        min-width: 199px;
+      }
+      .explore-list__item-btn-wrap{
+        .btn{
+          min-width: 281px;
+        }
+      }
+    }
+  }
+}
+
+.explore-list__item-inner {
+  @include box-shadow;
+  border-radius: $radius;
+  width: 330px;
+  @include respond-to(md){
+    //min-width: 100px;
+    width: auto;
+  }
+}
+
+.explore-list__item-img {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  min-height: 306px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    @include imageCover;
+    @include border-radius-top($radius);
+  }
+}
+
+.explore-list__item-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px $explorePadding;
+  height: $gap * 1.5;
+  margin: auto;
+  margin-bottom: 0;
+  min-width: 164px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.9rem;
+  z-index: 1;
+
+  @include respond-to(md){
+    font-size: 1rem;
+  }
+}
+
+.explore-list__item-content {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  padding: 23px $explorePadding $gap * 1.5;
+  min-height: 315px;
+  background-color: #fff;
+  position: relative;
+  @include respond-to(md){
+    padding: $gap $explorePadding $gap * 1.5;
+    min-height: 531px;
+    color: #333;
+  }
+}
+
+.explore-list__item-title {
+  padding-bottom: 23px;
+  text-align: center;
+  h3 {
+    font-size: 1.25rem; //26px
+    line-height: 1.3rem; //26px
+    font-weight: 800;
+    @include center;
+    br{
+      display: none;
+    }
+  }
+  @include respond-to(md){
+    h3{
+      br{
+        display: block;
+      }
+    }
+  }
+
+  @include respond-to(lg) {
+    padding-bottom: $gap;
+    h3 {
+      font-size: 1.65rem; //33px
+      line-height: 1.75rem; //35px
+    }
+  }
+}
+
+.explore-list__item-details {
+  position: relative;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  p {
+    padding: 10px 0;
+    font-size: 0.9rem; //18px
+  }
+
+  @include respond-to(md) {
+    padding-bottom: $gap;
+    border-top: 1px dotted $textDark !important;
+    p {
+      font-size: 1rem;
+      border-bottom: 1px dotted $textDark !important;
+    }
+  }
+}
+
+.explore-list__item-subdetails {
+  text-transform: uppercase;
+  p {
+    font-size: 0.65rem; //13px
+    line-height: 1;
+    border: none !important;
+    padding: 5px 0 0;
+  }
+}
+
+.explore-list__item-info {
+  display: none;
+  p {
+    margin-bottom: 3px;
+    font-size: 1rem;
+    line-height: 1.15rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  @include respond-to(md){
+    display: block;
+  }
+}
+
+.explore-list__item-highlight {
+  max-width: 430px;
+  p {
+    font-weight: 800;
+    font-size: 1rem;
+    line-height: 1.05rem;
+  }
+  @include respond-to(md){
+    padding-top: $explorePadding;
+  }
+}
+
+.explore-list__item-btn-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -23px;
+  text-align: center;
+}
+
+.explore-list__item-btn {
+  height: 61px;
+  min-width: 179px;
+  border-radius: $radius--lg - 1;
+  border: 1px solid #fff;
+  outline: none;
+  @include box-shadow;
+}
+
+/*COLOR SCHEMES FOR LIST ITEMS*/
+
+.explore-list__item {
+  &--blue {
+    color: $blueColor;
+    .explore-list__item-label {
+      background-color: $blueColor;
+    }
+    .explore-list__item-details {
+      border-top: 1px dotted $blueColor;
+      p {
+        border-bottom: 1px dotted $blueColor;
+      }
+    }
+    .explore-list__item-title {
+      color: $blueColor;
+    }
+    .explore-list__item-btn {
+      background-color: $blueColorTint;
+      color: $blueColor;
+    }
+  }
+}
+
+.explore-list__item {
+  &--red {
+    color: $redColor;
+    .explore-list__item-label {
+      background-color: $redColor;
+    }
+    .explore-list__item-details {
+      border-top: 1px dotted $redColor;
+      p {
+        border-bottom: 1px dotted $redColor;
+      }
+    }
+    .explore-list__item-title {
+      color: $redColor;
+    }
+    .explore-list__item-btn {
+      background-color: $redColorTint;
+      color: $redColor;
+    }
+  }
+}
+
+.explore-list__item {
+  &--bluegreen {
+    color: $blue-greenColor;
+    .explore-list__item-label {
+      background-color: $blue-greenColor;
+    }
+    .explore-list__item-details {
+      border-top: 1px dotted $blue-greenColorTint;
+      p {
+        border-bottom: 1px dotted $blue-greenColor;
+      }
+    }
+    .explore-list__item-title {
+      color: $blue-greenColor;
+    }
+    .explore-list__item-btn {
+      background-color: $blue-greenColorTint;
+      color: $blue-greenColor;
+    }
+  }
+}
+
+.explore-list__item {
+  &--orange {
+    color: $orangeColor;
+    .explore-list__item-label {
+      background-color: $orangeColor;
+    }
+    .explore-list__item-details {
+      border-top: 1px dotted $orangeColorTint;
+      p {
+        border-bottom: 1px dotted $orangeColor;
+      }
+    }
+    .explore-list__item-title {
+      color: $orangeColor;
+    }
+    .explore-list__item-btn {
+      background-color: $orangeColorTint;
+      color: $orangeColor;
+    }
+  }
+}
+
+.explore-list__item {
+  &--khaki {
+    color: $khakiColor;
+    .explore-list__item-label {
+      background-color: $khakiColor;
+    }
+    .explore-list__item-details {
+      border-top: 1px dotted $khakiColorTint;
+      p {
+        border-bottom: 1px dotted $khakiColor;
+      }
+    }
+    .explore-list__item-title {
+      color: $khakiColor;
+    }
+    .explore-list__item-btn {
+      background-color: $khakiColorTint;
+      color: $khakiColor;
+    }
+  }
+}

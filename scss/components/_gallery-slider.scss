@@ -1,0 +1,79 @@
+.gallery-slider {
+  position: relative;
+  margin-bottom: 1.5 * $gap;
+
+  &__item {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    z-index: 1;
+    padding: 10px;
+    transition: all 0.3s ease-in;
+    transform: rotate(1.75deg);
+
+    &--square {
+      max-width: 370px;
+    }
+
+    &.slick-next {
+      transform: translateX(-40%) scale(0.7) rotate(5deg);
+    }
+
+    &.slick-prev {
+      transform: translateX(50%) scale(0.7) rotate(-8deg);
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 0.8rem; //16px;
+      font-weight: 300;
+      line-height: 0.95rem; //19px;
+      color: $textDark;
+      transition: 0.3s ease-in;
+      opacity: 0;
+    }
+
+    &.slick-current {
+      z-index: 5;
+      p {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    border: 10px solid #fff;
+    box-shadow: 1px 1px 7px 0px rgba(99, 70, 87, 0.36);
+
+    img {
+      @include imageCover;
+    }
+  }
+
+  .arrow-slider {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+
+    &--prev {
+      left: 0;
+      transform: translate(-50%, -50%);
+
+      @include respond-to(sm) {
+        left: 65px;
+      }
+    }
+
+    &--next {
+      right: 0;
+      transform: translate(50%, -50%);
+
+      @include respond-to(sm) {
+        right: 65px;
+      }
+    }
+  }
+}

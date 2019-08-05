@@ -1,22 +1,22 @@
 /*-------------Button-----------------*/
 .btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  @include ai-flex-center();
-  @include jc-flex-center();
+  @include ai-flex-center;
+  @include jc-flex-center;
   line-height: 1;
   font-weight: 800;
   font-size: 0.9rem;
+  color: $textColor;
   text-transform: uppercase;
   white-space: nowrap;
-  border-radius: $radius;
-  @include box-shadow();
-  @include transition-03();
+  //border-radius: $radius;
+  @include box-shadow-btn;
+  @include transition-03;
   position: relative;
   outline: none !important;
 
-  &--animated { //prevent blurring on scale
+  &--animated {
+    //prevent blurring on scale
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -24,47 +24,60 @@
     transform: perspective(1px) translate3d(0, 0, 0);
   }
 
-  &--sm{
+  &--sm {
     height: $gap;
     padding-left: 17px;
     padding-right: 17px;
-    font-size: 0.8rem /// 16px
+    font-size: 0.8rem; /// 16px
+    border-radius: $radius;
   }
 
-  &--md{
+  &--md {
     height: 2 * $gap;
     min-width: 260px;
 
-    @include respond-to(lg){
+    @include respond-to(lg) {
       min-width: 315px;
     }
   }
 
-  &--lg{
+  &--lg {
     height: 2 * $gap;
     font-size: 0.9rem; /// 18px
     min-width: 289px;
-    border-radius: $radius + 4;
+    border-radius: $radius--xl;
 
-    @include respond-to(lg){
+    @include respond-to(lg) {
       min-width: 387px;
     }
   }
 
-  &--white{
+  &--white {
     background-color: #fff;
     color: $textColor;
     border: 2px solid $textColor;
   }
 
-  &--no-border{
+  &--no-border {
     border-color: transparent;
   }
 
-  &--yellow{
+  &--yellow {
     background-color: $yellowColorTint;
     border: 2px solid #fff;
     color: $textColor;
+  }
+
+  &--red {
+    color: $redColor;
+    border: 2px solid #fff;
+    background-color: $redColorTint;
+  }
+
+  &--blue {
+    color: $blueColor;
+    border: 2px solid #fff;
+    background-color: $blueColorTint;
   }
 
   &:hover,
@@ -73,4 +86,3 @@
     @include hover-scale;
   }
 }
-

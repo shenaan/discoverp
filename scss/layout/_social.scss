@@ -1,0 +1,158 @@
+/*We're social section*/
+
+.social{
+  padding-bottom: 13px;
+  @include respond-to(md){
+    margin-bottom: 4 * $gap;
+  }
+}
+
+.social__inner{
+  min-height: 514px;
+  margin:  0 -20px;
+  background-color: $blue-greenColor;
+  border: 1px solid #fff;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  @include box-shadow;
+  overflow: hidden;
+
+  @include respond-to(md){
+    flex-wrap: nowrap;
+    margin: 0;
+    border-radius: $radius;
+    overflow: visible;
+  }
+}
+
+.social__hootah{
+  @include respond-to(md){
+    right: -36px;
+    top: -186px;
+    transform: rotate(10deg);
+  }
+  @include respond-to(lg){
+    right: -78px;
+    top: -167px;;
+  }
+}
+
+.social__title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 20px;
+  max-width: 400px;
+  @include respond-to(md){
+    width: 42%;
+    max-width: 42%;
+    text-align: center;
+    padding-left: 36px;
+    padding-right: 72px;
+    br{
+      display: none;
+    }
+  }
+}
+
+.social__btn-wrap{
+  margin-top: $gap;
+}
+
+.btn.social__btn{
+  border-radius: $radius--lg - 1;
+  border: 1px solid #fff;
+  @include box-shadow-btn;
+  background-color: $blue-greenColorTint;
+  color: $blue-greenColor;
+  height: 61px;
+  min-width: 281px;
+}
+
+.social__images{
+  height: 470px;
+  width: 100%;
+  max-width: 400px;
+  @include center;
+  position: relative;
+  @include respond-to(md){
+    width: 58%;
+    max-width: 58%;
+    height: inherit;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.social__img{
+  position: absolute;
+  border: 10px solid #fff;
+  @include box-shadow;
+  background-color: $blue-greenColorTint;
+  img{
+    @include imageCover;
+  }
+  //by z-index
+  &--top{
+    z-index: 4;
+    @include size(212px, 218px);
+    transform: rotate(6deg);
+    bottom: 44px;
+    right: 32px;
+  }
+  &--right{
+    @include size(226px, 232px);
+    transform: rotate(-6deg);
+    z-index: 3;
+    right: -40px;
+    top: 76px;
+  }
+  &--left{
+    @include size(191px, 196px);
+    transform: rotate(-6deg);
+    z-index: 3;
+    left: -30px;
+    bottom: 120px;
+  }
+  &--bottom{
+    @include size(193px, 198px);
+    transform: rotate(6deg);
+    z-index: 1;
+    top: 0px;
+    left: 30px;
+  }
+
+  @include respond-to(md){
+    &--top{
+      z-index: 4;
+      @include size(314px, 322px);
+      transform: rotate(6deg);
+      bottom: -13px;
+      right: 18%;
+      left: auto;
+    }
+    &--right{
+      @include size(334px, 343px);
+      transform: rotate(-6deg);
+      z-index: 3;
+      right: 0;
+      top: 67px;
+    }
+    &--left{
+      @include size(282px, 289px);
+      transform: rotate(-6deg);
+      z-index: 3;
+      left: 3px;
+      bottom: 51px;
+    }
+    &--bottom{
+      @include size(285px, 293px);
+      transform: rotate(6deg);
+      z-index: 1;
+      top: -6px;
+      left: 90px;
+    }
+  }
+}

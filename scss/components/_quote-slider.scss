@@ -1,0 +1,75 @@
+.quote-slider {
+  position: relative;
+  margin-bottom: 2 * $gap;
+
+  &__container {
+    position: relative;
+    padding: 50px 30px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: $pageColorTint;
+      border-radius: $radius;
+      transform: rotate(1deg);
+      content: '';
+
+      @include respond-to(sm) {
+        transform: rotate(2deg);
+      }
+    }
+
+    .slick-list {
+      z-index: 2;
+      margin: 0 -15px;
+    }
+  }
+
+  &__item {
+    margin: 0 15px;
+    position: relative;
+    z-index: 2;
+
+    blockquote {
+      margin: 0 auto;
+      display: block;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    cite {
+      display: block;
+      text-align: center;
+      font-size: 1rem; //20px;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @include respond-to(sm) {
+      blockquote {
+        font-size: 1.75rem; //35px;
+        line-height: 1.9rem; //38px;
+      }
+    }
+  }
+
+  .arrow-slider {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+
+    &--prev {
+      left: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    &--next {
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+}

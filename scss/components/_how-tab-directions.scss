@@ -47,6 +47,7 @@
   width: -moz-fit-content;
   width: fit-content;
   @include center;
+  border-radius: $radius--xl;
 }
 
 .tab-directions__info-content{
@@ -77,6 +78,7 @@
   bottom: 0;
   width: 200px;
   height: 300px;
+  z-index: 1;
 
   @include respond-to(md){
     right: 19px;

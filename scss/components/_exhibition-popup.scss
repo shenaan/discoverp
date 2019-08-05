@@ -44,16 +44,16 @@
 }
 
 .popup-exhibition__img{
-  max-width: 164px;
+  @include size(162px, 166px);
   border: 9px solid #fff;
   overflow: hidden;
   position: relative;
   top: -30px;
-  @include display-flex;
-  @include rotate(-7deg);
+  @include rotate(-8deg);
   @include box-shadow();
   img{
     width: 100%;
+    @include imageCover();
   }
 }
 

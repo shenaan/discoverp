@@ -1,0 +1,110 @@
+.worlds{
+  padding-top: 40px;
+  padding-bottom: 118px;
+  background-color: $textColor;
+  color: #fff;
+  overflow: hidden;
+  @include respond-to(md){
+    padding-top: 2 * $gap;
+    overflow: visible;
+    padding-bottom: 171px;
+  }
+}
+
+.worlds__inner{
+  padding: 0 20px;
+  position: relative;
+
+  @include respond-to(md){
+    padding: 0;
+  }
+}
+
+.worlds__title{
+  margin-bottom: 40px;
+  .h1{
+    margin-bottom: $gap * 0.5;
+    max-width: 250px;
+  }
+
+  @include respond-to(md){
+    max-width: 810px;
+    @include center;
+    text-align: center;
+    margin-bottom: $gap * 2;
+    .h1{
+      margin-bottom: $gap;
+      max-width: 100%;
+    }
+  }
+}
+
+.worlds__caption-wrap{
+  background-color: $textColorTint;
+  color: $textColor;
+  padding: $gap * 0.5 20px;
+  @include box-shadow;
+  max-width: 1006px;
+  margin: 0 -21px;
+  position: relative;
+  bottom: -118px;
+  border: 1px solid #fff;
+  p{
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+  }
+
+  @include respond-to(md){
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -191px;
+    @include center;
+    padding: $gap * 0.5 45px;
+    border-radius: $radius;
+    p{
+      font-size: 1rem;
+      line-height: 1.1rem;
+    }
+  }
+
+  .worlds__caption{
+    display: none;
+    &--default{
+      display: block;
+    }
+  }
+}
+
+.worlds__helper{
+  position: absolute;
+  bottom: 100%;
+  @include size(271px, 108px);
+
+  @include respond-to(md){
+    @include size(405px, 153px);
+  }
+}
+
+.worlds__bubble.speech-bubble{
+  right: -24px;
+  top: -45px;
+  @include size(147px, 103px);
+  p{
+    color: $textDark;
+    width: 118px;
+  }
+  @include respond-to(md){
+    right: 0;
+    top: -50px;
+    @include size(191px, 134px);
+  }
+}
+
+.worlds__hootah.hootah--double{
+  left: 0;
+  width: 169px;
+  @include respond-to(md){
+    width: 240px;
+  }
+}

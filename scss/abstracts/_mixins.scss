@@ -81,7 +81,7 @@
       @content;
     }
   }
-    //// If the key doesn't exist in the map
+  //// If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
     +"Available breakpoints are: #{map-keys($breakpoints)}.";
@@ -155,10 +155,13 @@
   transform: skew($x, $y);
 }
 
-@mixin scaleTranslate($scaleX,$scaleY,$translateX,$translateY) {
-  -ms-transform: scale($scaleX, $scaleY) translateX($translateX) translateY($translateY);
-  -webkit-transform: scale($scaleX, $scaleY) translateX($translateX) translateY($translateY);
-  transform: scale($scaleX, $scaleY) translateX($translateX) translateY($translateY);
+@mixin scaleTranslate($scaleX, $scaleY, $translateX, $translateY) {
+  -ms-transform: scale($scaleX, $scaleY) translateX($translateX)
+    translateY($translateY);
+  -webkit-transform: scale($scaleX, $scaleY) translateX($translateX)
+    translateY($translateY);
+  transform: scale($scaleX, $scaleY) translateX($translateX)
+    translateY($translateY);
 }
 
 @mixin backface-visibility-hidden() {
@@ -198,7 +201,7 @@
   animation-fill-mode: $fill;
 }
 
-@mixin animation($name,$duration,$delay : 0,$loopTime : 1) {
+@mixin animation($name, $duration, $delay: 0, $loopTime: 1) {
   @include animation-name($name);
   @include animation-duration($duration + s);
   @include animation-iteration-count($loopTime);
@@ -211,7 +214,7 @@
 @mixin display-flex {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
 }
 
 @mixin flex-wrap {
@@ -342,8 +345,8 @@
 
 @mixin flex-direction-row {
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;;
-  -ms-flex-direction: row;;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
@@ -357,8 +360,8 @@
 /*-----------------CUSTOM MIXINS-----------------------*/
 
 @mixin link-animation-timing() {
-  -webkit-animation-timing-function: cubic-bezier(.39, .6, .71, .94);
-  animation-timing-function: cubic-bezier(.39, .6, .71, .94);
+  -webkit-animation-timing-function: cubic-bezier(0.39, 0.6, 0.71, 0.94);
+  animation-timing-function: cubic-bezier(0.39, 0.6, 0.71, 0.94);
 }
 
 @mixin transition-03() {
@@ -374,28 +377,63 @@
 }
 
 //main box shadow
-@mixin box-shadow($color: rgba(99, 70, 87, 0.36) ) {
+@mixin box-shadow($color: rgba(99, 70, 87, 0.36)) {
   -webkit-box-shadow: 4px 4px 7px 0px $color;
   box-shadow: 4px 4px 7px 0px $color;
 }
 
+//btn box shadow
+@mixin box-shadow-btn($color: rgba(99, 70, 87, 0.36)) {
+  -webkit-box-shadow: 1px 1px 7px 1px $color;
+  box-shadow: 1px 1px 7px 1px $color;
+}
+
 //bottom box shadow on 'after' elements on mob
-@mixin box-shadow-mob($color: rgba(26, 25, 26, 0.25) ) {
+@mixin box-shadow-mob($color: rgba(26, 25, 26, 0.25)) {
   -webkit-box-shadow: 0px 3px 4px 1px $color;
   box-shadow: 0px 3px 4px 1px $color;
 }
 
 //bottom inset box shadow on mob
-@mixin box-shadow-mob-inset($color: rgba(26, 25, 26, 0.25) ) {
+@mixin box-shadow-mob-inset($color: rgba(26, 25, 26, 0.25)) {
   -webkit-box-shadow: inset 0px -4px 7px 0px $color;
-  box-shadow:  inset 0px -4px 7px 0px $color;
+  box-shadow: inset 0px -4px 7px 0px $color;
 }
 
-@mixin box-shadow-top($color: rgba(26, 25, 26, 0.25) ) {
+@mixin box-shadow-top($color: rgba(26, 25, 26, 0.25)) {
   -webkit-box-shadow: 0px -4px 7px 0px $color;
   box-shadow: 0px -4px 7px 0px $color;
 }
 
 @mixin hover-scale() {
   @include transform-scale(1.07, 1.07);
+}
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin imageCover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
+@mixin border-radius-top($radius){
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius){
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
 }

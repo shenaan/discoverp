@@ -1,0 +1,23 @@
+.general-template {
+  padding-top: 2 * $gap;
+  padding-bottom: 2 * $gap;
+  background-color: $pageColorTint;
+
+  .main-container {
+    @include respond-to(md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__sidebar {
+    margin-bottom: 2 * $gap;
+
+    @include when-inside('.general-template') {
+      @include respond-to(md) {
+        width: 390px;
+      }
+    }
+  }
+}

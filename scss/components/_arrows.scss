@@ -1,4 +1,4 @@
-.arrow{
+.arrow {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -6,19 +6,40 @@
   @include jc-flex-center;
   border: 2px solid;
   border-radius: 100%;
-  &--sm{
+  &--sm {
     @include square(73px);
-    i{
+    i {
       font-size: 29px;
     }
   }
-  &--lg{
+  &--lg {
     @include square(90px);
-
   }
-  &--baseColor{
+  &--baseColor {
     color: $textColor;
     border-color: #fff;
     background-color: $textColorTint;
+  }
+}
+
+.arrow-slider {
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: $textColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px auto;
+  box-shadow: 2px 2px 4px 0 rgba(#000, 0.2);
+  cursor: pointer;
+
+  &--prev {
+    background-image: url('../img/arrow-left.png');
+  }
+
+  &--next {
+    background-image: url('../img/arrow-right.png');
   }
 }

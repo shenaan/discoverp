@@ -2,6 +2,7 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
 
 .how-tab__links{
   z-index: 10;
+
   &:after{
     content: '';
     display: block;
@@ -16,7 +17,7 @@ $yellowTabLink: #ebc850; /// darker yellow color for tab links
     position: relative;
     left: 0;
     right: 0;
-    //top: -166px;
+    overflow: hidden;
   }
 }
 

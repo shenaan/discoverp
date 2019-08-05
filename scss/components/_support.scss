@@ -1,0 +1,69 @@
+.support {
+  @include when-inside('.general-template') {
+    width: 100%;
+  }
+
+  .h1 {
+    margin-bottom: $gap;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond-to(sm) {
+      justify-content: space-between;
+    }
+
+    @include respond-to(md) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__card {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    width: 100%;
+    color: $textDark;
+    border-radius: 14px;
+    background-color: #fff;
+
+    @include respond-to(sm) {
+      width: calc(50% - 15px);
+    }
+
+    @include respond-to(md) {
+      margin-right: 30px;
+      width: calc((100% - 90px) / 4);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    p {
+      margin-top: 5px;
+      border-top: 1px dotted $textDark;
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    background-color: rgba(#000, 0.2); //remove later
+
+    &::before {
+      padding-top: 40%;
+      display: block;
+      content: '';
+    }
+
+    img {
+      @include imageCover;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+/*Explore events and exhibition section*/
+
+.explore{
+  padding-top: 40px;
+  padding-bottom: 54px;
+
+  @include respond-to(md){
+    padding-top: 148px;
+    padding-bottom: 4 * $gap;
+  }
+}
+
+.explore__inner{
+
+}
+
+.explore__title{
+  position: relative;
+  padding-bottom: 33px;
+  h2{
+    font-size: 2rem; //40px
+    line-height: 1.85rem; //37px
+    max-width: 440px;
+  }
+  @include respond-to(md){
+    padding-bottom: 2 * $gap;
+
+    h2{
+      font-size: 2.75rem; //55px
+      line-height: 2.75rem; //55px
+      max-width: 440px;
+    }
+  }
+}
+
+.explore__helper{
+  position: absolute;
+  right: 27px;
+  bottom: -19px;
+
+  width: 387px;
+  height: 243px;
+
+  .hootah{
+    right: 0;
+    bottom: 0;
+  }
+  .speech-bubble{
+    left: -29px;
+    top: -31px;
+    @include size(210px, 179px);
+    p{
+      color: $textDark;
+    }
+  }
+}
+
+.explore__btn-wrap{
+  margin-top: 40px;
+  text-align: center;
+  @include respond-to(md){
+    margin-top: $gap * 2;
+  }
+}
+
+.explore__btn.btn{
+  min-width: 100%;
+  font-size: 0.75rem;
+  @include center;
+  height: 81px;
+  border-radius: $radius--xl + 4;
+  background-color: #fff;
+  @include box-shadow;
+
+  @include respond-min(400){
+    font-size: 0.9rem;
+  }
+  @include respond-to(sm){
+    width: 50%;
+    min-width: 50%;
+  }
+  @include respond-to(md){
+    font-size: 1rem;
+  }
+}

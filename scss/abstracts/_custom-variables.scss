@@ -6,7 +6,7 @@ $Comic: 'classic-comic', sans-serif;
 $baseFontFamily: $Domus;
 
 /// Base font size (rem), line height and letter spacing
-@mixin font-size($size:20) {
+@mixin font-size($size: 20) {
   font-size: $size * 1px;
   font-size: ($size / $baseFontSize) * 1rem;
 }
@@ -19,7 +19,8 @@ $baseLetterSpacing: 0;
 
 /// Colors
 $textColor: #634657 !default;
-$bodyBackground: rgba(99, 70, 87, 0.1);
+$textDark: #333333;
+$bodyBackground: rgba(#634657, 0.1);
 
 $redColor: #c25c5c;
 $yellowColor: #ebc850;
@@ -28,7 +29,7 @@ $blue-greenColor: #4a848f;
 $orangeColor: #e87722;
 $beigeColor: #e1b88f;
 $khakiColor: #84754e;
-$blackColor: rgba(0, 0, 0, .8);
+$blackColor: rgba(0, 0, 0, 0.8);
 
 /// Opacity percent
 $tint: 0.2;
@@ -42,6 +43,7 @@ $blue-greenColorTint: #dbe7e9;
 $orangeColorTint: #fae4d3;
 $beigeColorTint: #f9f1e9;
 $khakiColorTint: #e7e3dc;
+$pageColorTint: rgba(#634657, 0.1);
 
 /// Rotation angle
 $angle: 135deg;
@@ -55,23 +57,42 @@ $gap-mob: 15px;
 ///  border radius
 $radius: 25px;
 $radius--lg: 29px;
+$radius--xl: 32px;
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1255px !default;  //1215 + 20px + 20px
+$max-width: 1255px !default; //1215 + 20px + 20px
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints: (
-        'xs': screen and (min-width: 572px),
-        'sm': screen and (min-width: 768px),
-        'md': screen and (min-width: 1024px),
-        'lg': screen and (min-width: 1280px),
-        'xl': screen and (min-width: 1440px),
-        'xxl': screen and (min-width: 1920px)
+  'xs': screen and
+    (
+      min-width: 572px
+    ),
+  'sm': screen and
+    (
+      min-width: 768px
+    ),
+  'md': screen and
+    (
+      min-width: 1024px
+    ),
+  'lg': screen and
+    (
+      min-width: 1280px
+    ),
+  'xl': screen and
+    (
+      min-width: 1440px
+    ),
+  'xxl': screen and
+    (
+      min-width: 1920px
+    )
 ) !default;
 
 /// defaul images and fonts location
-$fontsUrl: "../fonts/";
-$imgUrl: "../img/";
+$fontsUrl: '../fonts/';
+$imgUrl: '../img/';

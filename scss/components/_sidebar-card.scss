@@ -1,0 +1,171 @@
+.sidebar-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: $radius;
+  @include box-shadow;
+
+  &:not(:last-child) {
+    margin-bottom: $gap;
+  }
+
+  &--btn {
+    &:not(:last-child) {
+      margin-bottom: 2 * $gap;
+    }
+  }
+
+  &--contact {
+    background-color: $pageColorTint;
+    border: 1px solid #fff;
+  }
+
+  &--join {
+    background-color: $blueColorTint;
+    border: 1px solid #fff;
+  }
+
+  &__img-wrap {
+    position: relative;
+
+    &::before {
+      padding-top: 70%;
+      display: block;
+      content: '';
+    }
+
+    img {
+      @include imageCover;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    right: $gap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fff;
+    transform: translateY(-15px);
+    @include box-shadow;
+
+    @include when-inside('.sidebar-card--contact') {
+      color: #fff;
+      background-color: $textColor;
+    }
+
+    @include when-inside('.sidebar-card--join') {
+      color: #fff;
+      background-color: $blueColor;
+    }
+
+    @include when-inside('.sidebar-card--download') {
+      color: #fff;
+      background-color: $redColor;
+    }
+  }
+
+  &__inner {
+    padding-top: 0.5 * $gap;
+    padding-left: $gap;
+    padding-right: $gap;
+    color: $textDark;
+
+    h3,
+    h4 {
+      margin-bottom: 0.5 * $gap;
+      color: $redColor;
+    }
+
+    h4 {
+      margin-top: $gap;
+    }
+
+    a {
+      color: $textDark;
+    }
+
+    @include when-inside('.sidebar-card--contact') {
+      h3 {
+        padding-bottom: 0.5 * $gap;
+        color: $textColor;
+        border-bottom: 1px dotted $textColor;
+      }
+    }
+
+    @include when-inside('.sidebar-card--join') {
+      h3 {
+        padding-bottom: 0.5 * $gap;
+        color: $blueColor;
+        border-bottom: 1px dotted $blueColor;
+      }
+    }
+
+    @include when-inside('.sidebar-card--download') {
+      padding-bottom: $gap;
+
+      h3 {
+        padding-bottom: 0.5 * $gap;
+        border-bottom: 1px dotted $redColor;
+      }
+
+      a {
+        @extend .btn;
+        margin-top: 0.5 * $gap;
+        color: $redColor;
+        min-width: 190px;
+        min-height: 45px;
+        text-transform: uppercase;
+        border-radius: $radius;
+      }
+    }
+  }
+
+  &__contacts {
+    padding-top: 0.5 * $gap;
+    padding-bottom: 0.5 * $gap;
+
+    a {
+      font-weight: 600;
+    }
+  }
+
+  &__contact-row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact-badge {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    color: #fff;
+    font-size: 10px;
+    background-color: $textColor;
+    border-radius: 50%;
+  }
+
+  &__btn {
+    height: 62px;
+    min-width: 190px;
+    align-self: center;
+    border-radius: $radius--lg;
+    transform: translateY($gap);
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: translateY($gap) scale(1.07, 1.07);
+    }
+  }
+}

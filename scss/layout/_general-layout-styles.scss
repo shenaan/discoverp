@@ -5,18 +5,28 @@ html {
     overflow-y: hidden !important;
     height: 100% !important;
   }
-  &.no-scroll-initial{
+  &.no-scroll-initial {
     overflow: hidden !important;
     height: auto !important;
   }
+}
+
+html.disable-scrolling {
+  position: fixed;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 body {
   overflow-x: hidden;
   max-width: 100%;
 
-  &.is-tinted{
-    &:after{
+  @include when-inside('.disable-scrolling') {
+    overflow: visible;
+  }
+
+  &.is-tinted {
+    &:after {
       content: '';
       display: block;
       background-color: $blackColor;
@@ -31,10 +41,9 @@ body {
   }
 }
 
-.is-mobile{
+.is-mobile {
   display: block;
-
-  @include respond-min(1024){
+  @include respond-min(1024) {
     display: none;
   }
 }
