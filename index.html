@@ -1,602 +1,1043 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="format-detection" content="telephone=no"/>
 
-    <!--<link rel="shortcut icon" href="favicon.ico">-->
-    <!-- Place favicon.ico in the root directory -->
+  <!--<link rel="shortcut icon" href="favicon.ico">-->
+  <!-- Place favicon.ico in the root directory -->
 
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
-    <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Responsive images polyfill -->
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement('picture');
+  </script>
+  <script src="js/vendor/picturefill.min.js" async></script>
+  <!-- Responsive image polyfill end -->
 </head>
 <body>
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-    your browser</a> to improve your experience and security.</p>
+  your browser</a> to improve your experience and security.</p>
 <![endif]-->
 <div class="is-mobile"></div>
 
 <div class="homepage-content__wrap">
 
-    <!--page menu-->
-    <div class="page-menu">
-        <div class="page-menu__inner">
-            <div class="page-menu__header">
-                <a href="#" class="header__btn animated">
-                    <i class="icon icon-user"></i>
-                </a>
-                <a href="#" class="header__btn animated">
-                    <i class="icon icon-basket"></i>
-                </a>
-                <a href="#" class="btn btn--animated btn--white btn--sm header__book hide-in-mob">Book now</a>
-                <button class="header__hamburger">
-                    <i class="icon icon-cross"></i>
-                </button>
-            </div>
-            <nav class="page-nav order-1">
-                <ul class="page-nav__list">
-                    <li class="page-nav__list-item page-nav__list-item--lg">
-                        <a href="#" class="page-nav__list-link">Things to see & do
-                          <span class="page-nav__list-icon"></span>
-                        </a>
-                        <ul class="page-nav__dropdown">
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Opening times & prices</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Getting here</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Access</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Cafe & bookshop</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Birthday parties</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Venue hire</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="page-nav__list-item page-nav__list-item--lg">
-                        <a href="#" class="page-nav__list-link">Plan your visit
-                            <span class="page-nav__list-icon"></span>
-                        </a>
-                        <ul class="page-nav__dropdown">
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 03</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 04</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="page-nav__list-item">
-                        <a href="#" class="page-nav__list-link">Schools & Nurseries
-                            <span class="page-nav__list-icon"></span>
-                        </a>
-                        <ul class="page-nav__dropdown">
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 03</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="page-nav__list-item">
-                        <a href="#" class="page-nav__list-link">Who we are
-                            <span class="page-nav__list-icon"></span>
-                        </a>
-                        <ul class="page-nav__dropdown">
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="page-nav__list-item">
-                        <a href="#" class="page-nav__list-link">Support us
-                            <span class="page-nav__list-icon"></span>
-                        </a>
-                        <ul class="page-nav__dropdown">
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 01</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 02</a>
-                            </li>
-                            <li class="page-nav__dropdown-item">
-                                <a href="#" class="page-nav__dropdown-link">Item 03</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="page-menu__book order-2 show-in-mob">
-                <a href="#" class="btn btn--white btn--no-border page-menu__book-btn">Book my tickets</a>
-            </div>
-            <div class="page-menu__exhibition order-2 order-lg-2">
-                <div class="popup-exhibition__content">
-                    <div class="popup-exhibition__content-inner">
-                        <div class="p--small popup-exhibition__title">
-                            <p>Exhibition</p>
-                        </div>
-                        <h4>The Tiger Who Came to Tea</h4>
-                    </div>
-                </div>
-                <div class="popup-exhibition__img">
-                    <img src="img/homepage/exhibition-popup.jpg" alt="">
-                </div>
-                <a href="#" class="popup-exhibition__link arrow arrow--sm arrow--baseColor animated">
-                    <i class="icon-arrow-right"></i>
-                </a>
-            </div>
-            <div class="page-menu__search order-1 order-lg-3">
-                <form action="#" class="search-form">
-                    <div class="menu-search__input-wrap">
-                        <input type="search" class="search__input">
-                        <button type="submit" class="menu-search__submit-btn">
-                            <i class="icon icon-search"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="page-menu__overlay"></div>
-    <!--page menu-->
-
-    <!--homepage hero-->
-    <section class="homepage__hero">
-        <!--header-->
-        <header class="header">
-            <div class="main-container">
-                <div class="header__inner">
-                    <a href="index.html" title="Discover Children's Story Centre" class="header__logo">
-                        <img src="img/logo.svg" alt="Discover Children's Story Centre">
-                    </a>
-                    <div class="header__inner--right">
-                        <a href="#" class="btn btn--animated btn--white btn--sm header__book hide-in-mob">Book now</a>
-                        <button class="header__hamburger">
-                            <i class="icon icon-menu"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!--header-->
-
-        <div class="homepage-hero__bg">
-            <video class="video__bg hide-in-mob" webkit-playsinline="playsinline"
-                   playsinline="playsinline"
-                   muted="muted" autoplay="autoplay" loop="loop" preload="auto" width="1660"
-                   height="auto" poster="img/homepage/hero-poster.png">
-                <!--<source src="video/movie-hero.webm" type="video/webm">-->
-                <!--<source src="video/movie-hero.mp4" type="video/mp4">-->
-                Your browser does not support the video tag.
-            </video>
-            <img src="img/homepage/hero-poster.png" class="show-in-mob" alt="">
-        </div>
-        <div class="homepage-hero__content">
-            <h1>A place where children <br>
-                & their families can enjoy <br>
-                playing, learning & making <br>
-                up stories together!</h1>
-            <div class="homepage-hero__content-btn show-in-mob">
-                <a href="#" class="btn btn--white">Book now</a>
-            </div>
-        </div>
-        <div class="popup-exhibition hide-in-mob">
-            <div class="popup-exhibition__content">
-                <div class="popup-exhibition__content-inner">
-                    <div class="p--small popup-exhibition__title">
-                        <p>Exhibition</p>
-                    </div>
-                    <h4>The Tiger Who Came to Tea</h4>
-                </div>
-            </div>
-            <div class="popup-exhibition__img">
-                <img src="img/homepage/exhibition-popup.jpg" alt="">
-            </div>
-            <a href="#" class="popup-exhibition__link arrow arrow--sm arrow--baseColor animated">
-                <i class="icon-arrow-right"></i>
+  <!--page menu-->
+  <div class="page-menu">
+    <div class="page-menu__inner">
+      <div class="page-menu__header">
+        <a href="#" class="header__btn animated">
+          <i class="icon icon-user"></i>
+        </a>
+        <a href="#" class="header__btn animated">
+          <i class="icon icon-basket"></i>
+        </a>
+        <a href="#" class="btn btn--animated btn--white btn--sm header__book hide-in-mob">Book now</a>
+        <button class="header__hamburger">
+          <i class="icon icon-cross"></i>
+        </button>
+      </div>
+      <nav class="page-nav order-1">
+        <ul class="page-nav__list">
+          <li class="page-nav__list-item page-nav__list-item--lg">
+            <a href="#" class="page-nav__list-link">Things to see & do
+              <span class="page-nav__list-icon"></span>
             </a>
+            <ul class="page-nav__dropdown">
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Opening times & prices</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Getting here</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Access</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Cafe & bookshop</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Birthday parties</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Venue hire</a>
+              </li>
+            </ul>
+          </li>
+          <li class="page-nav__list-item page-nav__list-item--lg">
+            <a href="#" class="page-nav__list-link">Plan your visit
+              <span class="page-nav__list-icon"></span>
+            </a>
+            <ul class="page-nav__dropdown">
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 03</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 04</a>
+              </li>
+            </ul>
+          </li>
+          <li class="page-nav__list-item">
+            <a href="#" class="page-nav__list-link">Schools & Nurseries
+              <span class="page-nav__list-icon"></span>
+            </a>
+            <ul class="page-nav__dropdown">
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 03</a>
+              </li>
+            </ul>
+          </li>
+          <li class="page-nav__list-item">
+            <a href="#" class="page-nav__list-link">Who we are
+              <span class="page-nav__list-icon"></span>
+            </a>
+            <ul class="page-nav__dropdown">
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+              </li>
+            </ul>
+          </li>
+          <li class="page-nav__list-item">
+            <a href="#" class="page-nav__list-link">Support us
+              <span class="page-nav__list-icon"></span>
+            </a>
+            <ul class="page-nav__dropdown">
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 01</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 02</a>
+              </li>
+              <li class="page-nav__dropdown-item">
+                <a href="#" class="page-nav__dropdown-link">Item 03</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-menu__book order-2 show-in-mob">
+        <a href="#" class="btn btn--white btn--no-border page-menu__book-btn">Book my tickets</a>
+      </div>
+      <div class="page-menu__exhibition order-2 order-lg-2">
+        <div class="popup-exhibition__content">
+          <div class="popup-exhibition__content-inner">
+            <div class="p--small popup-exhibition__title">
+              <p>Exhibition</p>
+            </div>
+            <h4>The Tiger Who Came to Tea</h4>
+          </div>
         </div>
-    </section>
-    <!--homepage hero-->
-
-    <!--how it works-->
-    <section class="homepage-how">
-        <!--tab links-->
-        <div class="how-tab__links hide-in-mob">
-            <div class="main-container">
-                <div class="how-tab__links-inner">
-                    <div class="how-tab__link-item">
-                        <a href="#how-tab__directions" class="how-tab__link"><h3>How to <br> get here</h3></a>
-                    </div>
-                    <div class="how-tab__link-item">
-                        <a href="#how-tab__work" class="how-tab__link"><h3>How it <br> works</h3></a>
-                    </div>
-                    <div class="how-tab__link-item is-active">
-                        <a href="#how-tab__build" class="how-tab__link"><h3>Build your <br> day pass!</h3></a>
-                    </div>
-                </div>
-            </div>
+        <div class="popup-exhibition__img">
+          <img src="img/homepage/exhibition-popup.jpg" alt="">
         </div>
-        <!--tab links-->
+        <a href="#" class="popup-exhibition__link arrow arrow--sm arrow--baseColor animated">
+          <i class="icon-arrow-right"></i>
+        </a>
+      </div>
+      <div class="page-menu__search order-1 order-lg-3">
+        <form action="#" class="search-form">
+          <div class="menu-search__input-wrap">
+            <input type="search" class="search__input">
+            <button type="submit" class="menu-search__submit-btn">
+              <i class="icon icon-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="page-menu__overlay"></div>
+  <!--page menu-->
 
-        <!--tabs-->
-        <div class="how-tabs__wrap">
-            <div class="how-tab__link-item show-in-mob">
-                <a href="#how-tab__directions" class="how-tab__link"><h3>How to get here</h3>
-                    <span class="how-tab__link-btn">
+  <!--homepage hero-->
+  <section class="homepage__hero">
+    <!--header-->
+    <header class="header">
+      <div class="main-container">
+        <div class="header__inner">
+          <a href="index.html" title="Discover Children's Story Centre" class="header__logo">
+            <img src="img/logo.svg" alt="Discover Children's Story Centre">
+          </a>
+          <div class="header__inner--right">
+            <a href="#" class="btn btn--animated btn--white btn--sm header__book hide-in-mob">Book now</a>
+            <button class="header__hamburger">
+              <i class="icon icon-menu"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--header-->
+
+    <div class="homepage-hero__bg">
+      <video class="video__bg hide-in-mob" webkit-playsinline="playsinline"
+             playsinline="playsinline"
+             muted="muted" autoplay="autoplay" loop="loop" preload="auto" width="1660"
+             height="auto" poster="img/homepage/hero-poster.png">
+        <!--<source src="video/movie-hero.webm" type="video/webm">-->
+        <!--<source src="video/movie-hero.mp4" type="video/mp4">-->
+        Your browser does not support the video tag.
+      </video>
+      <img src="img/homepage/hero-poster.png" class="show-in-mob" alt="">
+    </div>
+    <div class="homepage-hero__content">
+      <h1>A place where children <br>
+        & their families can enjoy <br>
+        playing, learning & making <br>
+        up stories together!</h1>
+      <div class="homepage-hero__content-btn show-in-mob">
+        <a href="#" class="btn btn--white">Book now</a>
+      </div>
+    </div>
+    <div class="popup-exhibition hide-in-mob">
+      <div class="popup-exhibition__content">
+        <div class="popup-exhibition__content-inner">
+          <div class="p--small popup-exhibition__title">
+            <p>Exhibition</p>
+          </div>
+          <h4>The Tiger Who Came to Tea</h4>
+        </div>
+      </div>
+      <div class="popup-exhibition__img">
+        <img src="img/homepage/exhibition-popup.jpg" alt="">
+      </div>
+      <a href="#" class="popup-exhibition__link arrow arrow--sm arrow--baseColor animated">
+        <i class="icon-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+  <!--homepage hero-->
+
+  <!--how it works-->
+  <section class="homepage-how">
+    <!--tab links-->
+    <div class="how-tab__links hide-in-mob">
+      <div class="main-container">
+        <div class="how-tab__links-inner">
+          <div class="how-tab__link-item">
+            <a href="#how-tab__directions" class="how-tab__link"><h3>How to <br> get here</h3></a>
+          </div>
+          <div class="how-tab__link-item">
+            <a href="#how-tab__work" class="how-tab__link"><h3>How it <br> works</h3></a>
+          </div>
+          <div class="how-tab__link-item is-active">
+            <a href="#how-tab__build" class="how-tab__link"><h3>Build your <br> day pass!</h3></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--tab links-->
+
+    <!--tabs-->
+    <div class="how-tabs__wrap">
+      <div class="how-tab__link-item show-in-mob">
+        <a href="#how-tab__directions" class="how-tab__link"><h3>How to get here</h3>
+          <span class="how-tab__link-btn">
                         <i class="icon icon-close"></i>
                         <i class="icon icon-open"></i>
                     </span>
-                </a>
-            </div>
-            <!--tab directions-->
-            <div class="how-tab__item how-tab__item--directions" id="how-tab__directions">
-                <div class="main-container">
-                    <div class="how-tab__item-inner">
-                        <div class="how-tab__item-row">
-                            <div class="how-tab__item-col how-tab__item-col--2">
-                                <div class="tab-directions__map-wrap">
-                                    <div class="tab-directions__map" id="tab-direction__map"></div>
-                                </div>
-                            </div>
-                            <div class="how-tab__item-col how-tab__item-col--1">
-                                <div class="tab-directions__info">
-                                    <div class="tab-directions__info-inner">
-                                        <div class="tab-direction__helper">
-                                            <div class="hootah hootah--sm tab-directions__hootah">
-                                                <img src="img/bird-small.png" class="hootah__img" alt="">
-                                            </div>
-                                            <div class="speech-bubble speech-bubble--right bubble-text tab-directions__bubble">
-                                                <p>Rere, cuptae sinciam incipsant es comniatio. Itatur?
-                                                    Ne con nus</p>
-                                            </div>
-                                        </div>
-                                        <h2>Getting here</h2>
-                                        <div class="tab-directions__info-content">
-                                            <p>
-                                                <i class="icon icon-pin"></i>
-                                                383-387 High Street <br>
-                                                Stratford, London E15 4QZ </p>
-                                        </div>
-                                        <div class="tab-directions__info-content">
-                                            <p>
-                                                <i class="icon icon-telephone"></i>
-                                                020 8536 5555</p>
-                                        </div>
-                                        <div class="tab-directions__info-content">
-                                            <p>
-                                                <i class="icon icon-envelope"></i>
-                                                bookings@discover.org.uk</p>
-                                        </div>
-                                        <a href="#"
-                                           class="tab-directions__info-btn btn btn--animated btn--yellow btn--md">More
-                                            information</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </a>
+      </div>
+      <!--tab directions-->
+      <div class="how-tab__item how-tab__item--directions" id="how-tab__directions">
+        <div class="main-container">
+          <div class="how-tab__item-inner">
+            <div class="how-tab__item-row">
+              <div class="how-tab__item-col how-tab__item-col--2">
+                <div class="tab-directions__map-wrap">
+                  <div class="tab-directions__map" id="tab-direction__map"></div>
                 </div>
+              </div>
+              <div class="how-tab__item-col how-tab__item-col--1">
+                <div class="tab-directions__info">
+                  <div class="tab-directions__info-inner">
+                    <div class="tab-direction__helper">
+                      <div class="hootah hootah--sm tab-directions__hootah">
+                        <img src="img/bird-small.png" class="hootah__img" alt="">
+                      </div>
+                      <div class="speech-bubble speech-bubble--right bubble-text tab-directions__bubble">
+                        <p>Rere, cuptae sinciam incipsant es comniatio. Itatur?
+                          Ne con nus</p>
+                      </div>
+                    </div>
+                    <h2>Getting here</h2>
+                    <div class="tab-directions__info-content">
+                      <p>
+                        <i class="icon icon-pin"></i>
+                        383-387 High Street <br>
+                        Stratford, London E15 4QZ </p>
+                    </div>
+                    <div class="tab-directions__info-content">
+                      <p>
+                        <i class="icon icon-telephone"></i>
+                        020 8536 5555</p>
+                    </div>
+                    <div class="tab-directions__info-content">
+                      <p>
+                        <i class="icon icon-envelope"></i>
+                        bookings@discover.org.uk</p>
+                    </div>
+                    <a href="#"
+                       class="tab-directions__info-btn btn btn--animated btn--yellow btn--md">More
+                      information</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!--tab directions-->
+          </div>
+        </div>
+      </div>
+      <!--tab directions-->
 
-            <div class="how-tab__link-item show-in-mob">
-                <a href="#how-tab__work" class="how-tab__link"><h3>How it works</h3>
-                    <span class="how-tab__link-btn">
+      <div class="how-tab__link-item show-in-mob">
+        <a href="#how-tab__work" class="how-tab__link"><h3>How it works</h3>
+          <span class="how-tab__link-btn">
                         <i class="icon icon-close"></i>
                         <i class="icon icon-open"></i>
                     </span>
-                </a>
+        </a>
+      </div>
+      <!--tab work-->
+      <div class="how-tab__item how-tab__item--work" id="how-tab__work">
+        <div class="main-container">
+          <div class="how-tab__item-inner">
+            <div class="tab-work__title hide-in-mob">
+              <p>
+                Ilinam isquodi pre oris. Ex num, sediend eessulu ternum fatum vestis uius num, sediend
+                sediend eessulu ternum fatum vestis uiu.
+              </p>
             </div>
-            <!--tab work-->
-            <div class="how-tab__item how-tab__item--work" id="how-tab__work">
-                <div class="main-container">
-                    <div class="how-tab__item-inner">
-                        <div class="tab-work__title hide-in-mob">
-                            <p>
-                                Ilinam isquodi pre oris. Ex num, sediend eessulu ternum fatum vestis uius num, sediend
-                                sediend eessulu ternum fatum vestis uiu.
-                            </p>
-                        </div>
-                        <div class="tab-work__list how-tab__item-row">
-                            <div class="tab-work__slider">
-                                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
-                                    <div class="tab-work__list-num animated">
-                                        <span>1</span>
-                                    </div>
-                                    <h2>Pick your <br>
-                                        day pass</h2>
-                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
-                                </div>
-                                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
-                                    <div class="tab-work__list-num animated">
-                                        <span>2</span>
-                                    </div>
-                                    <h2>Build <br>
-                                        your day!</h2>
-                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
-                                </div>
-                                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
-                                    <div class="tab-work__list-num animated">
-                                        <span>3</span>
-                                    </div>
-                                    <h2>Finalise <br>
-                                        your order</h2>
-                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="tab-work__list how-tab__item-row">
+              <div class="tab-work__slider">
+                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
+                  <div class="tab-work__list-num animated">
+                    <span>1</span>
+                  </div>
+                  <h2>Pick your <br>
+                    day pass</h2>
+                  <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
                 </div>
-                <div class="how-tab__item-footer">
-                    <div class="how-tab__footer-btn">
-                        <button type="button" class="btn btn--animated btn--lg btn--yellow">start building my day
-                            pass!
-                        </button>
-                    </div>
+                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
+                  <div class="tab-work__list-num animated">
+                    <span>2</span>
+                  </div>
+                  <h2>Build <br>
+                    your day!</h2>
+                  <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
                 </div>
+                <div class="tab-work__list-item how-tab__item-col how-tab__item-col--1">
+                  <div class="tab-work__list-num animated">
+                    <span>3</span>
+                  </div>
+                  <h2>Finalise <br>
+                    your order</h2>
+                  <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum.</p>
+                </div>
+              </div>
             </div>
-            <!--tab work-->
+          </div>
+        </div>
+        <div class="how-tab__item-footer">
+          <div class="how-tab__footer-btn">
+            <button type="button" class="btn btn--animated btn--lg btn--yellow">start building my day
+              pass!
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--tab work-->
 
-            <div class="how-tab__link-item show-in-mob is-active">
-                <a href="#how-tab__build" class="how-tab__link"><h3>Build your day pass!</h3>
-                    <span class="how-tab__link-btn">
+      <div class="how-tab__link-item show-in-mob is-active">
+        <a href="#how-tab__build" class="how-tab__link"><h3>Build your day pass!</h3>
+          <span class="how-tab__link-btn">
                         <i class="icon icon-close"></i>
                         <i class="icon icon-open"></i>
                     </span>
-                </a>
-            </div>
-            <!--tab build-->
-            <div class="how-tab__item how-tab__item--build is-active" id="how-tab__build">
-                <div class="main-container">
-                    <div class="how-tab__item-inner">
-                        <div class="how-tab__item-row">
-                            <div class="how-tab__item-col how-tab__item-col--2 tab-build__col tab-build__default">
-                                <div class="tab-build__content">
-                                    <h2>To begin building your day pass,
-                                        first you’ll need to select a date!</h2>
-                                    <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum vestis. Fuius
-                                        incerum.
-                                        Num, sediend eessulu ternum fatum vestis. Fuius incerum.</p>
-                                    <div class="tab-build__helper hide-in-mob">
-                                        <div class="hootah hootah--md hootah--right tab-build__hootah">
-                                            <img src="img/bird-md.png" class="hootah__img" alt="">
-                                        </div>
-                                        <div class="speech-bubble speech-bubble--left bubble-text tab-build__bubble">
-                                            <p>Apeles <br> volum quo quiassi taerciendio mil iunde</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="how-tab__item-col how-tab__item-col--1 tab-build__col">
-                                <div class="page__calendar__wrap">
-                                    <div id="page__calendar" class="page__calendar"></div>
-                                    <div class="tab-build__helper show-in-mob">
-                                        <div class="hootah hootah--md hootah--right tab-build__hootah">
-                                            <img src="img/bird-md.png" class="hootah__img" alt="">
-                                        </div>
-                                        <div class="speech-bubble speech-bubble--left bubble-text tab-build__bubble">
-                                            <p>Apeles <br> volum quo quiassi taerciendio mil iunde</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="how-tab__item-col how-tab__item-col--2 tab-build__col tab-build__events">
-                                <div class="tab-build__events-table is-default is-active" data-date="08/15/2019">
-                                    <div class="tab-build__events-header">
-                                        <p>Showing what’s on for: <span
-                                                class="tab-build__events-date">Wednesday 26 July</span></p>
-                                    </div>
-                                    <div class="tab-build__events-body">
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Story Worlds</span>
-                                                <span class="tab-build-events-schedule--wrap">
+        </a>
+      </div>
+      <!--tab build-->
+      <div class="how-tab__item how-tab__item--build is-active" id="how-tab__build">
+        <div class="main-container">
+          <div class="how-tab__item-inner">
+            <div class="how-tab__item-row">
+              <div class="how-tab__item-col how-tab__item-col--2 tab-build__col tab-build__default">
+                <div class="tab-build__content">
+                  <h2>To begin building your day pass,
+                    first you’ll need to select a date!</h2>
+                  <p>Ilinam isquodi pre oris. Ex nu m, sediend eessulu ternum fatum vestis. Fuius
+                    incerum.
+                    Num, sediend eessulu ternum fatum vestis. Fuius incerum.</p>
+                  <div class="tab-build__helper hide-in-mob">
+                    <div class="hootah hootah--md hootah--right tab-build__hootah">
+                      <img src="img/bird-md.png" class="hootah__img" alt="">
+                    </div>
+                    <div class="speech-bubble speech-bubble--left bubble-text tab-build__bubble">
+                      <p>Apeles <br> volum quo quiassi taerciendio mil iunde</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="how-tab__item-col how-tab__item-col--1 tab-build__col">
+                <div class="page__calendar__wrap">
+                  <div id="page__calendar" class="page__calendar"></div>
+                  <div class="tab-build__helper show-in-mob">
+                    <div class="hootah hootah--md hootah--right tab-build__hootah">
+                      <img src="img/bird-md.png" class="hootah__img" alt="">
+                    </div>
+                    <div class="speech-bubble speech-bubble--left bubble-text tab-build__bubble">
+                      <p>Apeles <br> volum quo quiassi taerciendio mil iunde</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="how-tab__item-col how-tab__item-col--2 tab-build__col tab-build__events">
+                <div class="tab-build__events-table is-default is-active" data-date="08/15/2019">
+                  <div class="tab-build__events-header">
+                    <p>Showing what’s on for: <span
+                      class="tab-build__events-date">Wednesday 26 July</span></p>
+                  </div>
+                  <div class="tab-build__events-body">
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Story Worlds</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                     Every day 10.00am – 5.00pm
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
-                                            <p>
-                                                <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
-                                                <span class="tab-build-events-schedule--wrap">
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
+                      <p>
+                        <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                     <span class="tab-build__events-schedule">11.30am</span>
                                                     <span class="tab-build__events-schedule">12.30am</span>
                                                     <span class="tab-build__events-schedule">1.00am</span>
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                     <span class="tab-build__events-schedule">11.30am</span>
                                                     <span class="tab-build__events-label">Last Few</span>
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
+                      </p>
+                    </div>
+                    <div
+                      class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                     <span class="tab-build__events-schedule">11.30am</span>
                                                     <span class="tab-build__events-label">Sold out</span>
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
 
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                     <span class="tab-build__events-schedule">11.30am</span>
                                                 </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-build__events-table" data-date="08/16/2019">
-                                    <div class="tab-build__events-header">
-                                        <p>Showing what’s on for: <span
-                                                class="tab-build__events-date">Friday 16 August</span></p>
-                                    </div>
-                                    <div class="tab-build__events-body">
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Story Worlds</span>
-                                                <span class="tab-build-events-schedule--wrap">
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-build__events-table" data-date="08/16/2019">
+                  <div class="tab-build__events-header">
+                    <p>Showing what’s on for: <span
+                      class="tab-build__events-date">Friday 16 August</span></p>
+                  </div>
+                  <div class="tab-build__events-body">
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Story Worlds</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                   Every day 10.00am – 5.00pm
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
-                                            <p>
-                                                <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
-                                                <span class="tab-build-events-schedule--wrap">
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored">
+                      <p>
+                        <span class="tab-build__events-name">The Tiger Who Came to Tea</span>
+                        <span class="tab-build-events-schedule--wrap">
                                                     <span class="tab-build__events-schedule">11.30am</span>
                                                     <span class="tab-build__events-schedule">12.30am</span>
                                                     <span class="tab-build__events-schedule">1.00am</span>
                                                 </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                    <span class="tab-build__events-label">Last Few</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                    <span class="tab-build__events-label">Sold out</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                    <span class="tab-build__events-label">Last Few</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                    <span class="tab-build__events-label">Sold out</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-build__events-table" data-date="08/17/2019">
-                                    <div class="tab-build__events-header">
-                                        <p>Showing what’s on for: <span class="tab-build__events-date">Saturday 17 August</span>
-                                        </p>
-                                    </div>
-                                    <div class="tab-build__events-body">
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Story Worlds</span>
-                                                Every day 10.00am – 5.00pm
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                    <span class="tab-build__events-label">Last Few</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
-                                            <p>
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                    <span class="tab-build__events-label">Sold out</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="tab-build__events-row tab-build__events-row">
-                                            <p>
-
-                                                <span class="tab-build__events-name">Event name</span>
-                                                <span class="tab-build-events-schedule--wrap">
-                                                    <span class="tab-build__events-schedule">11.30am</span>
-                                                </span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </p>
                     </div>
-                </div>
-                <div class="how-tab__item-footer how-tab__item-footer--build is-hidden">
-                    <div class="how-tab__footer-btn">
-                        <button type="button" class="btn btn--animated btn--lg btn--yellow">start building my day
-                            pass!
-                        </button>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                    <span class="tab-build__events-label">Last Few</span>
+                                                </span>
+                      </p>
                     </div>
+                    <div
+                      class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                    <span class="tab-build__events-label">Sold out</span>
+                                                </span>
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                </span>
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                    <span class="tab-build__events-label">Last Few</span>
+                                                </span>
+                      </p>
+                    </div>
+                    <div
+                      class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                    <span class="tab-build__events-label">Sold out</span>
+                                                </span>
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                </span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
+                <div class="tab-build__events-table" data-date="08/17/2019">
+                  <div class="tab-build__events-header">
+                    <p>Showing what’s on for: <span class="tab-build__events-date">Saturday 17 August</span>
+                    </p>
+                  </div>
+                  <div class="tab-build__events-body">
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Story Worlds</span>
+                        Every day 10.00am – 5.00pm
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                    <span class="tab-build__events-label">Last Few</span>
+                                                </span>
+                      </p>
+                    </div>
+                    <div
+                      class="tab-build__events-row tab-build__events-row tab-build__events-row--colored tab-build__events-row--soldout">
+                      <p>
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                    <span class="tab-build__events-label">Sold out</span>
+                                                </span>
+                      </p>
+                    </div>
+                    <div class="tab-build__events-row tab-build__events-row">
+                      <p>
+
+                        <span class="tab-build__events-name">Event name</span>
+                        <span class="tab-build-events-schedule--wrap">
+                                                    <span class="tab-build__events-schedule">11.30am</span>
+                                                </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!--tab build-->
+          </div>
         </div>
-        <!--tabs-->
-    </section>
-    <!--how it works-->
+        <div class="how-tab__item-footer how-tab__item-footer--build is-hidden">
+          <div class="how-tab__footer-btn">
+            <button type="button" class="btn btn--animated btn--lg btn--yellow">start building my day
+              pass!
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--tab build-->
+    </div>
+    <!--tabs-->
+  </section>
+  <!--how it works-->
+
+  <!--what will you discover section-->
+  <section class="discover">
+    <div class="main-container">
+      <div class="discover__inner">
+        <div class="discover__inner-content">
+          <div class="discover__title">
+            <div class="h1">What will <br>
+              you discover?
+            </div>
+            <p>Ilinam isquodi pre oris. Ex num, sediend eessulu ternum fatum vestis uius num, sediend.</p>
+            <div class="discover__btn-wrap">
+              <a href="#" class="btn discover__btn">Find out more</a>
+            </div>
+            <div class="hootah discover__hootah hootah--right hootah--sm--long hide-in-mob">
+              <img src="img/bird-small-long.png" alt="">
+            </div>
+          </div>
+          <div class="discover__images">
+            <div class="discover__img discover__img--01" data-caption="discover--01">
+              <img src="img/homepage/discover-01.jpg" class="animated" alt="">
+            </div>
+            <div class="discover__img discover__img--02" data-caption="discover--02">
+              <img src="img/homepage/discover-02.jpg" class="animated" alt="">
+            </div>
+            <div class="discover__img discover__img--03" data-caption="discover--03">
+              <img src="img/homepage/discover-03.jpg" class="animated" alt="">
+            </div>
+            <div class="discover__img discover__img--04" data-caption="discover--04">
+              <img src="img/homepage/discover-04.jpg" class="animated" alt="">
+            </div>
+            <div class="discover__img discover__img--05" data-caption="discover--05">
+              <img src="img/homepage/discover-05.jpg" class="animated" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="discover__inner-caption">
+          <p class="discover__caption discover__caption-default discover--01">Ilinam isquodi pre oris. Ex num, sediend
+            eessulu ternum fatum vestis.</p>
+          <p class="discover__caption discover--02">Ilinam isquodi pre oris. Ex num, sediend eessulu ternum fatum.</p>
+          <p class="discover__caption discover--03">Ilinam. Ex num, sediend eessulu ternum fatum.</p>
+          <p class="discover__caption discover--04">Ilinam. Ex num, Ex num, sediend eessulu ternum fatum.</p>
+          <p class="discover__caption discover--05">Ex num, Ex num, sediend eessulu ternum fatum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--what will you discover section-->
+
+  <!--explore story worlds-->
+  <section class="worlds">
+    <div class="worlds__inner">
+      <div class="worlds__title">
+        <div class="h1">Explore our story worlds!</div>
+        <p>Ilinam isquodi pre oris. Ex num, sediend eessuluternum fatum vestis uius num, sediend .Geni core ni ut
+          molorios dia vendae porem. Tem fugitio ilias ipsam.</p>
+      </div>
+      <div class="gallery-slider worlds-slider">
+        <div class="gallery-slider__container worlds-slider__container">
+          <div class="gallery-slider__item" data-caption="worlds-caption--01">
+            <div class="gallery-slider__img-wrap">
+              <picture>
+                <source
+                  srcset="img/homepage/carousel-01.jpg"
+                  media="(min-width: 768px)"
+                />
+                <img src="img/homepage/carousel-01.jpg" alt=""/>
+              </picture>
+            </div>
+          </div>
+          <div class="gallery-slider__item gallery-slider__item--square" data-caption="worlds-caption--02">
+            <div class="gallery-slider__img-wrap">
+              <picture>
+                <source
+                  srcset="img/homepage/carousel-02.jpg"
+                  media="(min-width: 768px)"
+                />
+                <img src="img/homepage/carousel-02.jpg" alt=""/>
+              </picture>
+            </div>
+          </div>
+          <div class="gallery-slider__item gallery-slider__item--square" data-caption="worlds-caption--03">
+            <div class="gallery-slider__img-wrap">
+              <picture>
+                <source
+                  srcset="img/homepage/carousel-03.jpg"
+                  media="(min-width: 768px)"
+                />
+                <img src="img/homepage/carousel-03.jpg" alt=""/>
+              </picture>
+            </div>
+          </div>
+        </div>
+        <button class="arrow-slider arrow-slider--prev"></button>
+        <button class="arrow-slider arrow-slider--next"></button>
+      </div>
+      <div class="worlds__caption-wrap">
+        <div class="worlds__helper">
+          <div class="hootah hootah--right hootah--double worlds__hootah">
+            <img src="img/birds-small.png" alt="">
+          </div>
+          <div class="speech-bubble speech-bubble--left-wide bubble-text worlds__bubble">
+            <p>Ces senis dunt et doluptatur?
+              Nequi quis ea
+              que sapidi</p>
+          </div>
+        </div>
+        <p class="worlds__caption worlds__caption--default worlds-caption--01">Ilinam isquodi pre oris. Ex num, sediend eessulu ternum
+          fatum vestis. Sent. Lame eum fugiatius Doluptibus dolore.</p>
+        <p class="worlds__caption worlds-caption--02">Ilinam isquodi pre oris.</p>
+        <p class="worlds__caption worlds-caption--03">Ex num, sediend eessulu ternum
+          fatum vestis. Sent. Lame eum fugiatius Doluptibus dolore.</p>
+      </div>
+    </div>
+  </section>
+  <!--explore story worlds-->
+
+  <!--explore events section-->
+  <section class="explore">
+    <div class="explore__inner">
+      <div class="main-container">
+        <!--explore title-->
+        <div class="explore__title">
+          <h2>Explore our events
+            and exhibitions!</h2>
+          <!--helper-->
+          <div class="explore__helper hide-in-mob">
+            <div class="hootah hootah--double">
+              <img src="img/birds-small.png" alt="">
+            </div>
+            <div class="speech-bubble speech-bubble--right bubble-text">
+              <p>these make
+                the perfect
+                addition to your <br> day pass!</p>
+            </div>
+          </div>
+          <!--helper-->
+        </div>
+        <!--explore title-->
+
+        <!--explore list-->
+        <div class="explore-list__wrap">
+          <div class="explore-list explore__carousel">
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--lg explore-list__item--blue">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-01.jpg" alt="">
+                  <div class="explore-list__item-label">Exhibition</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>The Tiger Who <br>
+                      Came to Tea</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> Until September 2019</p>
+                    <p><b>Age guide:</b> 0—3</p>
+                    <p><b>Duration:</b> 40 mins</p>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>An immersive exhibition of the world of Judith Kerr’s creatures.
+                      Join The Tiger for tea and hear the tale of his surprise visit to
+                      Sophie and her mummy. Open the door and take a trip into the
+                      real-life world of Mog the Forgetful Cat.</p>
+                  </div>
+                  <div class="explore-list__item-highlight">
+                    <p>We strongly advise booking in advance
+                      to avoid disappointment!</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--sm explore-list__item--red">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-02.jpg" alt="">
+                  <div class="explore-list__item-label">Activity</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>Mighty <br>
+                      Mega</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> SATURDAYS*</p>
+                    <p><b>Age guide:</b> 5-11</p>
+                    <p><b>Duration:</b> 1 HOUR</p>
+                    <div class="explore-list__item-subdetails">
+                      <p>*TERM TIME ONLY</p>
+                    </div>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>Children can take part in
+                      storytelling, music, dance, arts,
+                      crafts and multi-sensory play.</p>
+                    <p>From 10-11am members will
+                      have exclusive use of the new
+                      First Floor Story World.</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--sm explore-list__item--bluegreen">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-03.jpg" alt="">
+                  <div class="explore-list__item-label">STORY TELLING</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>Elmer’s <br>
+                      Walk</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> SATURDAYS*</p>
+                    <p><b>Age guide:</b> 0-3</p>
+                    <p><b>Duration:</b> 20 mins</p>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>Elmer sees and hears amazing
+                      things on his walk, but the
+                      other animals are too busy
+                      to stop and enjoy them with
+                      him. What will you discover
+                      on Elmer’s Walk?</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--sm explore-list__item--red">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-02.jpg" alt="">
+                  <div class="explore-list__item-label">Activity</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>Hillacerro tem <br>
+                      aliquiatur mi</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> SATURDAYS*</p>
+                    <p><b>Age guide:</b> 5-11</p>
+                    <p><b>Duration:</b> 1 HOUR</p>
+                    <div class="explore-list__item-subdetails">
+                      <p>*TERM TIME ONLY</p>
+                    </div>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>Children can take part in
+                      storytelling, music, dance, arts,
+                      crafts and multi-sensory play.</p>
+                    <p>From 10-11am members will
+                      have exclusive use of the new
+                      First Floor Story World.</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--sm explore-list__item--orange">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-03.jpg" alt="">
+                  <div class="explore-list__item-label">SCREENING</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>Volorit <br>
+                      alia dio</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> SATURDAYS*</p>
+                    <p><b>Age guide:</b> 0-3</p>
+                    <p><b>Duration:</b> 20 mins</p>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>Elmer sees and hears amazing
+                      things on his walk, but the
+                      other animals are too busy
+                      to stop and enjoy them with
+                      him. What will you discover
+                      on Elmer’s Walk?</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--sm explore-list__item--khaki">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-02.jpg" alt="">
+                  <div class="explore-list__item-label">Activity</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>Mighty <br>
+                      Mega</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> SATURDAYS*</p>
+                    <p><b>Age guide:</b> 5-11</p>
+                    <p><b>Duration:</b> 1 HOUR</p>
+                    <div class="explore-list__item-subdetails">
+                      <p>*TERM TIME ONLY</p>
+                    </div>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>Children can take part in
+                      storytelling, music, dance, arts,
+                      crafts and multi-sensory play.</p>
+                    <p>From 10-11am members will
+                      have exclusive use of the new
+                      First Floor Story World.</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+
+            <!--explore list item-->
+            <div class="explore-list__item explore-list__item--sm explore-list__item--bluegreen">
+              <div class="explore-list__item-inner">
+                <div class="explore-list__item-img">
+                  <img src="img/homepage/explore-03.jpg" alt="">
+                  <div class="explore-list__item-label">STORY TELLING</div>
+                </div>
+                <div class="explore-list__item-content">
+                  <div class="explore-list__item-title">
+                    <h3>Elmer’s <br>
+                      Walk</h3>
+                  </div>
+                  <div class="explore-list__item-details">
+                    <p><b>DATES:</b> SATURDAYS*</p>
+                    <p><b>Age guide:</b> 0-3</p>
+                    <p><b>Duration:</b> 20 mins</p>
+                  </div>
+                  <div class="explore-list__item-info">
+                    <p>Elmer sees and hears amazing
+                      things on his walk, but the
+                      other animals are too busy
+                      to stop and enjoy them with
+                      him. What will you discover
+                      on Elmer’s Walk?</p>
+                  </div>
+                  <div class="explore-list__item-btn-wrap">
+                    <a href="#" class="btn explore-list__item-btn">Book now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--explore list item-->
+          </div>
+        </div>
+        <!--explore list-->
+        <div class="explore__btn-wrap">
+          <a href="#" class="explore__btn btn btn--animated">VIEW ALL UPCOMING EVENTS & EXHIBITIONS</a>
+        </div>
+      </div>
+    </div>  <!--explore inner-->
+  </section>
+  <!--explore events section-->
+
+  <!--social section-->
+  <section class="social">
+    <div class="main-container">
+      <div class="social__inner">
+        <div class="hootah hootah--lg hide-in-mob social__hootah">
+          <img src="img/bird-lg.png" alt="">
+        </div>
+        <div class="social__title order-0 order-lg-1">
+          <div class="h1">We’re social! <br>
+            Get a closer look into our world!
+          </div>
+          <div class="social__btn-wrap">
+            <a href="#" class="btn social__btn">FIND US ON INSTAGRAM</a>
+          </div>
+        </div>
+        <div class="social__images order-1 order-lg-0">
+          <div class="social__img social__img--top">
+            <img src="img/homepage/social-03.jpg" alt="">
+          </div>
+          <div class="social__img social__img--right">
+            <img src="img/homepage/social-01.jpg" alt="">
+          </div>
+          <div class="social__img social__img--left">
+            <img src="img/homepage/social-04.jpg" alt="">
+          </div>
+          <div class="social__img social__img--bottom">
+            <img src="img/homepage/social-02.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--social section-->
 </div>
 
 
@@ -611,29 +1052,28 @@
 <script src="js/vendor/slick/slick.min.js"></script>
 <script src="js/vendor/jquery-ui.min.js"></script>
 <script src="js/vendor/moment.min.js"></script>
-<script src="js/vendor/moment-timezone-with-data-10-year-range.min.js"></script>
 <script src="js/main.js"></script>
 
 <script>
-    $(function () {
-        $("#page__calendar").datepicker({
-            minDate: "-1M", maxDate: "+2M"
-        });
+  $(function () {
+    $("#page__calendar").datepicker({
+      minDate: "-1M", maxDate: "+2M"
     });
+  });
 
 </script>
 
 <script>
-    function initialize() {
-        var latlng = new google.maps.LatLng(51.539039, -0.0023263, 17);
-        var myOptions = {
-            zoom: 16,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("tab-direction__map"),
-            myOptions);
-    }
+  function initialize() {
+    var latlng = new google.maps.LatLng(51.539039, -0.0023263, 17);
+    var myOptions = {
+      zoom: 16,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("tab-direction__map"),
+      myOptions);
+  }
 
 </script>
 <script async defer
