@@ -5,7 +5,7 @@
   padding-bottom: 54px;
 
   @include respond-to(md){
-    padding-top: 148px;
+    padding-top: 165px;
     padding-bottom: 4 * $gap;
   }
 }
@@ -36,10 +36,10 @@
 .explore__helper{
   position: absolute;
   right: 27px;
-  bottom: -19px;
-
+  bottom: -22px;
   width: 387px;
   height: 243px;
+  z-index: 1;
 
   .hootah{
     right: 0;

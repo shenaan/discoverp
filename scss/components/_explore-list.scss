@@ -114,8 +114,8 @@ $explorePadding: 16px;
   background-color: #fff;
   position: relative;
   @include respond-to(md){
-    padding: $gap $explorePadding $gap * 1.5;
-    min-height: 531px;
+    padding: $gap $explorePadding 37px;
+    min-height: 574px;
     color: #333;
   }
 }
@@ -190,6 +190,7 @@ $explorePadding: 16px;
   }
   @include respond-to(md){
     display: block;
+    margin-bottom: $gap * 1.5;
   }
 }
 

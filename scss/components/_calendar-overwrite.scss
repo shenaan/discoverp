@@ -98,13 +98,16 @@ $eventTableTextColor: #333;
         background-color: $textColor;
         border-radius: 50%;
         @include square(120%);
+        flex: 1 0 120%;
         left: -10%;
         top: -10%;
+        z-index: 20;
 
         @include respond-to(lg){
           left: -20%;
           top: -20%;
           @include square(140%);
+          flex: 1 0 140%;
           font-size: 1.6rem; //32px
         }
       }

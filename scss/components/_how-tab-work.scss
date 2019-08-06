@@ -32,6 +32,8 @@
   }
 
   @include respond-to(md){
+    opacity: 1 !important;
+    left: auto !important;
     &:nth-of-type(2){
       border-left: 2px dotted #333;
       border-right: 2px dotted #333;

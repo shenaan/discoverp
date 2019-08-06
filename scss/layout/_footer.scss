@@ -126,6 +126,14 @@
     color: #fff;
     font-size: 30px;
   }
+  &:active, &:hover, &:focus{
+    i{
+      &:before{
+        animation: wiggle 0.75s ease-in 1;
+      }
+    }
+  }
+
   @include respond-to(md){
     margin-bottom: 0;
   }
